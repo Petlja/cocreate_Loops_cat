@@ -1,67 +1,67 @@
-# Caesar Cipher
+# Xifratge Cèsar
 
-One of the great generals who used coded messages was Julius Caesar, around 50
-BC. When Caesar sent messages to his generals, he encrypted them by shifting
-the letters in the text by a fixed number of places in the alphabet. The
-recipients of the message could decipher it because they knew the shift value
-— while everyone else saw only meaningless text.
+Un dels grans generals que va utilitzar missatges codificats va ser Juli Cèsar, cap al 50
+aC. Quan Cèsar enviava missatges als seus generals, els xifrava desplaçant
+les lletres del text un nombre fix de posicions a l'alfabet. Els
+destinataris del missatge podien desxifrar-lo perquè coneixien el valor de desplaçament
+— mentre que tothom altre veia només text sense sentit.
 
-For example, if you wrote `NIKOLATESLA` and shifted each letter three places to
-the right:
+Per exemple, si escrivíeu `NIKOLATESLA` i desplaçàveu cada lletra tres posicions a
+la dreta:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 
-The letter `N` becomes `K`, `I` becomes `F`, and so on. So, each letter is
-replaced by another letter that is a fixed number of positions further along in
-the alphabet. When the end of the alphabet is reached, the sequence continues
-from the beginning. The result of the shift operation by three letters to the
-right would be the encrypted message `KFHLIXQBPIX`. On the other hand, if each
-letter in the resulting word were shifted three letters to the left:
+La lletra `N` es converteix en `K`, `I` es converteix en `F`, i així successivament. Doncs, cada lletra és
+reemplaçada per una altra lletra que es troba un nombre fix de posicions més endavant a
+l'alfabet. Quan s'arriba al final de l'alfabet, la seqüència continua
+des del principi. El resultat de l'operació de desplaçament de tres lletres a la
+dreta seria el missatge xifrat `KFHLIXQBPIX`. D'altra banda, si cada
+letra de la paraula resultant es desplacés tres lletres a l'esquerra:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-The letter `K` becomes `N`, `F` becomes `I`, and so on. The result of the shift
-operation would be the original decrypted message `NIKOLATESLA`.
+La lletra `K` es converteix en `N`, `F` es converteix en `I`, i així successivament. El resultat de l'operació de desplaçament
+seria el missatge desxifrat original `NIKOLATESLA`.
 
-![Caesar Cipher Left Shift](./images/caesar1.png)
+![Desplaçament esquerre del xifratge Cèsar](./images/caesar1.png)
 
-## Simple assignment
+## Assignació simple
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the Caesar cipher.
+Creeu una aplicació de consola en qualsevol llenguatge de programació per xifrar i desxifrar
+missatges utilitzant el xifratge Cèsar.
 
 ```{infonote}
-First student (*the driver*) should be focused on syntax while writing the
-code for message encryption. Second student (*the navigator*) should review
-each line of code as it is typed, looking for the mistakes, asking questions,
-and suggesting improvements. After that, the students should switch roles,
-and continue with writing decryption code.
+El primer estudiant (*el pilot*) ha de centrar-se en la sintaxi mentre escriu el
+codi per al xifratge de missatges. El segon estudiant (*el navegant*) ha de revisar
+cada línia de codi a mesura que s'escriu, buscant errors, fent preguntes
+i suggerint millores. Després, els estudiants han d'intercanviar els rols
+i continuar escrivint el codi de desxifratge.
 ```
 
-The allowed alphabet for messages (for plaintext and ciphertext) can include
-only lowercase letters of the English alphabet:
+L'alfabet permès per als missatges (per al text pla i el text xifrat) pot incloure
+només lletres minúscules de l'alfabet anglès:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
+Els espais, les lletres majúscules, els números i altres caràcters no estan permesos.
 
-In the first line of the user input there will be a message `m` no longer than
-one hundred characters, in the second line there will be an integer `n` which
-represents the shift value ($1 \leq n < 26$), and in the third line there will
-be an integer `s`, which represents the encryption direction. If $s=1$ then `m`
-should be encrypted, and if $s=2$, then `m` should be decrypted.
+A la primera línia de l'entrada de l'usuari hi haurà un missatge `m` de no més de
+cent caràcters, a la segona línia hi haurà un enter `n` que
+representa el valor de desplaçament ($1 \leq n < 26$), i a la tercera línia hi haurà
+un enter `s`, que representa la direcció del xifratge. Si $s=1$, llavors `m`
+ha de ser xifrat, i si $s=2$, llavors `m` ha de ser desxifrat.
 
-### Test example 1
+### Exemple de prova 1
 
-If the input is:
+Si l'entrada és:
 
 ```text
 nikolatesla
@@ -69,15 +69,15 @@ nikolatesla
 1
 ```
 
-the output should be:
+la sortida ha de ser:
 
 ```text
 kfhlixqbpix
 ```
 
-### Test example 2
+### Exemple de prova 2
 
-If the input is:
+Si l'entrada és:
 
 ```text
 kfhlixqbpix
@@ -85,20 +85,20 @@ kfhlixqbpix
 2
 ```
 
-the output should be:
+la sortida ha de ser:
 
 ```text
 nikolatesla
 ```
 
-## Start the assignment
+## Comenceu l'assignació
 
-[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142923)
+[Implementeu el xifratge aquí](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142923)
 
-## Solution hints
+## Consells per a la solució
 
-Since there are 26 letters in the English alphabet, the position of each letter
-can be represented by a number from 0 to 25.
+Com que hi ha 26 lletres a l'alfabet anglès, la posició de cada lletra
+es pot representar amb un número de 0 a 25.
 
 * a → 0
 * b → 1
@@ -106,81 +106,80 @@ can be represented by a number from 0 to 25.
 * ...
 * z → 25
 
-To **encrypt** a letter, you can use the following formula:
+Per **xifrar** una lletra, podeu utilitzar la fórmula següent:
 
 ```text
 new_letter_position = (current_letter_position + shift_value) mod 26
 ```
 
-`original_position` represents the numeric value of the letter in the alphabet,
-`shift_value` represents number of positions to move (1–25), and `mod 26`
-ensures that the result wraps around to the start of the alphabet if it goes
-past `z`.
+`original_position` representa el valor numèric de la lletra a l'alfabet,
+`shift_value` representa el nombre de posicions a moure (1–25), i `mod 26`
+assegura que el resultat torni al principi de l'alfabet si supera `z`.
 
-To **decrypt** a letter, you can use the following formula:
+Per **desxifrar** una lletra, podeu utilitzar la fórmula següent:
 
 ```text
 new_letter_position = (current_letter_position - shift_value + 26) mod 26
 ```
 
-Similarly like encryption, but you subtract the shift value, and `+ 26` ensures
-that the value does not become negative before applying `mod 26`.
+De manera similar al xifratge, però es resta el valor de desplaçament, i `+ 26` assegura
+que el valor no es torni negatiu abans d'aplicar `mod 26`.
 
-## Advanced Caesar Cipher Assignments (optional)
+## Assignacions avançades del xifratge Cèsar (opcionals)
 
-### Expand the allowed aplhabet
+### Amplieu l'alfabet permès
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the Caesar cipher. The allowed alphabet for messages (for
-plaintext and ciphertext) can include lowercase and uppercase letters of the
-English alphabet, spaces, numbers, and punctuation!
+Creeu una aplicació de consola en qualsevol llenguatge de programació per xifrar i desxifrar
+missatges utilitzant el xifratge Cèsar. L'alfabet permès per als missatges (per al
+text pla i el text xifrat) pot incloure lletres minúscules i majúscules de
+l'alfabet anglès, espais, números i puntuació!
 
-The application must encrypt or decrypt only lowercase and uppercase letters.
-Spaces, numbers, and punctuation marks should remain unchanged during
-encryption or decryption.
+L'aplicació ha de xifrar o desxifrar només lletres minúscules i majúscules.
+Els espais, els números i els signes de puntuació han de romandre sense canvis durant
+el xifratge o el desxifratge.
 
-In the first line of the standard input there will be a message `m` no longer
-than one hundred characters, in the second line there will be an integer `n`
-which represents the shift ($1 \leq n < 26$), and in the third line there will
-be an integer `s`, which represents the encryption direction. If $s=1$ then `m`
-should be encrypted, and if $s=2$, then `m` should be decrypted.
+A la primera línia de l'entrada estàndard hi haurà un missatge `m` de no més
+de cent caràcters, a la segona línia hi haurà un enter `n`
+que representa el desplaçament ($1 \leq n < 26$), i a la tercera línia hi haurà
+un enter `s`, que representa la direcció del xifratge. Si $s=1$ llavors `m`
+ha de ser xifrat, i si $s=2$, llavors `m` ha de ser desxifrat.
 
-## Use the functions
+## Utilitzeu les funcions
 
-Create two functions: one for encrypting messages and one for decrypting
-messages. Use the created functions in your main program.
+Creeu dues funcions: una per xifrar missatges i una per desxifrar
+missatges. Utilitzeu les funcions creades al vostre programa principal.
 
-## Create a Class
+## Creeu una classe
 
-Create a `CaesarCipher` class that contains:
+Creeu una classe `CaesarCipher` que contingui:
 
-* a constructor with a parameter that accepts the shift value and ensures that
-the value is within the allowed range,
-* a private property to store the shift value, with getter and setter methods,
-* a public method to encrypt the message,
-* a public method to decrypt the message, and
-* optionally, include a private method to process messages, which will be used
-by both encryption and decryption methods.
+* un constructor amb un paràmetre que accepti el valor de desplaçament i asseguri que
+el valor estigui dins del rang permès,
+* una propietat privada per emmagatzemar el valor de desplaçament, amb mètodes getter i setter,
+* un mètode públic per xifrar el missatge,
+* un mètode públic per desxifrar el missatge, i
+* opcionalment, incloeu un mètode privat per processar missatges, que serà utilitzat
+tant pels mètodes de xifratge com de desxifratge.
 
-Use the created class in your main program.
+Utilitzeu la classe creada al vostre programa principal.
 
-## Accept Command Line Arguments
+## Accepteu arguments de la línia d'ordres
 
-Instead of waiting for the user input, create a console application that
-accepts the following command line arguments:
+En lloc d'esperar l'entrada de l'usuari, creeu una aplicació de consola que
+accepti els arguments de la línia d'ordres següents:
 
-1. argument `m` for specifying the message,
-2. argument `n` for specifying the shift value (`0` to `25`), and
-3. argument `s` for specifying the shift direction (`1` for encryption, and `2`
-for decryption).
+1. argument `m` per especificar el missatge,
+2. argument `n` per especificar el valor de desplaçament (`0` a `25`), i
+3. argument `s` per especificar la direcció del desplaçament (`1` per al xifratge, i `2`
+per al desxifratge).
 
-## Encrypt and decrypt files
+## Xifreu i desxifreu fitxers
 
-Use the knowledge you gained so far to create a console application for
-encrypting and decrypting text files. Your application should accept the
-following command line arguments:
+Utilitzeu els coneixements adquirits fins ara per crear una aplicació de consola per
+xifrar i desxifrar fitxers de text. La vostra aplicació ha d'acceptar els arguments de la
+línia d'ordres següents:
 
-1. argument `m` for specifying the filename (or a path),
-2. argument `n` for specifying the shift value (`0` to `25`), and
-3. argument `s` for specifying the shift direction (`1` for encryption, and `2`
-for decryption).
+1. argument `m` per especificar el nom del fitxer (o una ruta),
+2. argument `n` per especificar el valor de desplaçament (`0` a `25`), i
+3. argument `s` per especificar la direcció del desplaçament (`1` per al xifratge, i `2`
+per al desxifratge).

@@ -1,5 +1,5 @@
 
-project = 'PLCT Template'
+project = 'Introducció a la Criptografia amb Bucles'
 copyright = '2025, Fondacija Petlja'
 author = 'Fondacija Petlja'
 
@@ -23,7 +23,7 @@ myst_enable_extensions = [ "colon_fence",
 
 templates_path = ['_templates']
 exclude_patterns = []
-language = 'sr-Latn'
+language = 'en'
 
 import plct_sphinx_components
 html_static_path = ['_static'] + plct_sphinx_components.extensions.static_dirs()

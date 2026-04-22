@@ -1,8 +1,8 @@
 # XOR
 
-XOR *(Exclusive OR)* is a logical operation that outputs true (1) only when
-inputs differ. It's a fundamental binary operation with important applications
-in computer science and cryptography.
+XOR *(OR exclusiu)* és una operació lògica que produeix cert (1) només quan
+les entrades difereixen. És una operació binària fonamental amb importants aplicacions
+en informàtica i criptografia.
 
 | A | B | A XOR B |
 | - | - | :-----: |
@@ -11,8 +11,8 @@ in computer science and cryptography.
 | 1 | 0 | 1       |
 | 1 | 1 | 0       |
 
-For example, to encrypt the word "HELLO" using the key "KEY", you should first
-convert `HELLO` to binary...
+Per exemple, per xifrar la paraula "HELLO" utilitzant la clau "KEY", primer heu de
+convertir `HELLO` a binari...
 
 | Char | ASCII | Binary   |
 | ---- | ----- | -------- |
@@ -22,7 +22,7 @@ convert `HELLO` to binary...
 | L    | 76    | 01001100 |
 | O    | 79    | 01001111 |
 
-...then convert `KEY` to binary...
+...després convertiu `KEY` a binari...
 
 | Char | ASCII | Binary   |
 | ---- | ----- | -------- |
@@ -30,8 +30,8 @@ convert `HELLO` to binary...
 | E    | 69    | 01000101 |
 | Y    | 89    | 01011001 |
 
-...and finally do the encryption - XOR each character with key, repeating the
-key as many times as necessary:
+...i finalment feu el xifratge - XOR de cada caràcter amb la clau, repetint la
+clau tantes vegades com sigui necessari:
 
 ```text
 H ⊕ K: 01001000 ⊕ 01001011 = 00000011 (ASCII 3)
@@ -41,12 +41,12 @@ L ⊕ K: 01001100 ⊕ 01001011 = 00000111 (ASCII 7)
 O ⊕ E: 01001111 ⊕ 01000101 = 00001010 (ASCII 10)
 ```
 
-The resulting ciphertext consists of ASCII non-printable characters with
-decimal values 3, 0, 21, 7, and 10. If an attacker intercepted this message,
-they would see only unreadable binary data, since the characters are
-non-printable.
+El text xifrat resultant consisteix en caràcters ASCII no imprimibles amb
+valors decimals 3, 0, 21, 7 i 10. Si un atacant interceptés aquest missatge,
+només veuria dades binàries il·legibles, ja que els caràcters no són
+imprimibles.
 
-To decrypt the ciphertext you should XOR ciphertext with same key:
+Per desxifrar el text xifrat heu de fer XOR del text xifrat amb la mateixa clau:
 
 ```text
 3  ⊕ K: 00000011 ⊕ 01001011 = 01001000 (ASCII 72 → H)
@@ -56,40 +56,40 @@ To decrypt the ciphertext you should XOR ciphertext with same key:
 10 ⊕ E: 00001010 ⊕ 01000101 = 01001111 (ASCII 79 → O)
 ```
 
-The XOR operation is self-inverse — applying XOR twice with the same key
-restores the original data.
+L'operació XOR és autoinversa — aplicar XOR dues vegades amb la mateixa clau
+restaureix les dades originals.
 
-In real-world applications, reusing the same key for multiple messages makes
-XOR encryption vulnerable to frequency analysis and known-plaintext attacks.
-XOR alone doesn’t provide strong security unless the key is properly managed
-and is at least as long as the message — as in a one-time pad. However, for
-educational purposes and basic demonstrations of cryptographic principles, XOR
-is simple and ideal.
+En aplicacions del món real, reutilitzar la mateixa clau per a múltiples missatges fa que
+el xifratge XOR sigui vulnerable a l'anàlisi de freqüència i als atacs de text pla conegut.
+El XOR sol no proporciona una seguretat forta tret que la clau s'administri adequadament
+i sigui almenys tan llarga com el missatge — com en un bloc d'un sol ús. No obstant això, per a
+propòsits educatius i demostracions bàsiques de principis criptogràfics, XOR
+és simple i ideal.
 
-## Simple assignment
+## Assignació simple
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the XOR operation.
+Creeu una aplicació de consola en qualsevol llenguatge de programació per xifrar i desxifrar
+missatges utilitzant l'operació XOR.
 
-The allowed alphabet for messages (both plaintext and key) includes only
-lowercase English letters:
+L'alfabet permès per als missatges (tant per al text pla com per a la clau) inclou només
+lletres angleses minúscules:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed.
+Els espais, les lletres majúscules, els números i altres caràcters no estan permesos.
 
-In the first line of the user input there will be a message `m` no longer than
-one hundred ASCII characters for plaintext or 800 bits for ciphertext, in the
-second line there will be a key `k` no longer than five characters, and in the
-third line there will be an integer `s`, which represents the operation. If
-$s=1$ then `m` is plaintext and should be encrypted, and if $s=2$, then `m` is
-ciphertext in binary and should be decrypted.
+A la primera línia de l'entrada de l'usuari hi haurà un missatge `m` de no més de
+cent caràcters ASCII per al text pla o 800 bits per al text xifrat, a la
+segona línia hi haurà una clau `k` de no més de cinc caràcters, i a la
+tercera línia hi haurà un enter `s`, que representa l'operació. Si
+$s=1$ llavors `m` és text pla i ha de ser xifrat, i si $s=2$, llavors `m` és
+text xifrat en binari i ha de ser desxifrat.
 
-### Test example 1
+### Exemple de prova 1
 
-If the input is:
+Si l'entrada és:
 
 ```text
 nikolatesla
@@ -97,15 +97,15 @@ ser
 1
 ```
 
-the output should be:
+la sortida ha de ser:
 
 ```text
 0001110100001100000110010001110000001001000100110000011100000000000000010001111100000100
 ```
 
-### Test example 2
+### Exemple de prova 2
 
-If the input is:
+Si l'entrada és:
 
 ```text
 0001110100001100000110010001110000001001000100110000011100000000000000010001111100000100
@@ -113,63 +113,62 @@ ser
 2
 ```
 
-the output should be:
+la sortida ha de ser:
 
 ```text
 nikolatesla
 ```
 
-## Start the assignment
+## Comenceu l'assignació
 
-[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
+[Implementeu el xifratge aquí](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
 
-## Solution hints
+## Consells per a la solució
 
-Each character is stored in memory as an 8-bit ASCII value (for lowercase
-letters a–z, the codes range from 97 to 122). To encrypt a character, take its
-ASCII value and the ASCII value of the corresponding key character (cycling
-through the key), apply XOR (^) between them and output the result as an 8-bit
-binary number.
+Cada caràcter s'emmagatzema en memòria com un valor ASCII de 8 bits (per a les lletres
+minúscules a–z, els codis van del 97 al 122). Per xifrar un caràcter, preneu el seu
+valor ASCII i el valor ASCII del caràcter de clau corresponent (ciclant
+pel conjunt de la clau), apliqueu XOR (^) entre ells i produïu el resultat com un número binari de 8 bits.
 
-To decrypt, follow the reverse process, take each 8-bit binary block from
-ciphertext, convert it back to an integer (0–255), XOR with the ASCII value of
-the corresponding key character and convert the result back to a character.
+Per desxifrar, seguiu el procés invers: preneu cada bloc binari de 8 bits del
+text xifrat, convertiu-lo de nou a un enter (0–255), feu XOR amb el valor ASCII del
+caràcter de clau corresponent i convertiu el resultat de nou a un caràcter.
 
-## Advanced XOR Assignments (optional)
+## Assignacions avançades de XOR (opcionals)
 
-### Expand the allowed alphabet
+### Amplieu l'alfabet permès
 
-Allow lowercase and uppercase letters, spaces, numbers, and punctuation.
-Non-letter characters are XORed with the key in the same way.
+Permeteu lletres minúscules i majúscules, espais, números i puntuació.
+Els caràcters que no són lletres es fan XOR amb la clau de la mateixa manera.
 
-## Use functions
+## Utilitzeu funcions
 
-Create two functions: `encrypt()` for encrypting messages and `decrypt()` for
-decrypting messages. Use the created functions in your main program.
+Creeu dues funcions: `encrypt()` per xifrar missatges i `decrypt()` per
+desxifrar missatges. Utilitzeu les funcions creades al vostre programa principal.
 
-### Create a Class
+### Creeu una classe
 
-Create an `XorCipher` class that:
+Creeu una classe `XorCipher` que:
 
-* Stores the key,
-* Provides `encrypt()` and `decrypt()` methods,
-* Optionally includes a private helper to repeat the key over the message length.
+* Emmagatzemi la clau,
+* Proporcioni mètodes `encrypt()` i `decrypt()`,
+* Opcionalment inclogui un auxiliar privat per repetir la clau sobre la longitud del missatge.
 
-Use the created class in your main program.
+Utilitzeu la classe creada al vostre programa principal.
 
-### Accept Command Line Arguments
+### Accepteu arguments de la línia d'ordres
 
-Instead of waiting for the user input, create a console application that
-accepts the following command line arguments:
+En lloc d'esperar l'entrada de l'usuari, creeu una aplicació de consola que
+accepti els arguments de la línia d'ordres següents:
 
-1. argument `m` for specifying the message,
-2. argument `k` for specifying the key, and
-3. argument `s` for specifying the operation (`1` to encrypt, `2` to decrypt).
+1. argument `m` per especificar el missatge,
+2. argument `k` per especificar la clau, i
+3. argument `s` per especificar l'operació (`1` per xifrar, `2` per desxifrar).
 
-### Encrypt and Decrypt Files
+### Xifreu i desxifreu fitxers
 
-Use the knowledge you gained so far to create a program that can:
+Utilitzeu els coneixements adquirits fins ara per crear un programa que pugui:
 
-* read plaintext or binary ciphertext from a file,
-* encrypt or decrypt it with a given key, and
-* write the result back to a new file.
+* llegir text pla o text xifrat binari d'un fitxer,
+* xifrar-lo o desxifrar-lo amb una clau donada, i
+* escriure el resultat en un nou fitxer.
