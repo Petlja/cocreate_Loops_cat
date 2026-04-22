@@ -1,19 +1,19 @@
-# Good collaboration rules
+# Bones regles de col·laboració
 
-1. We are all equal and we respect one another.
-2. We foster a good atmosphere even when we think differently.
-3. We are all responsible for group work. In successful groups, all members have a sense of joint or shared responsibility for the results of group work.
-4. We help everyone contribute to group work.
-5. We strive to involve everyone in decision-making.
-6. The more ideas we consider, the more certain we are that we have selected the best one.
-7. We expound every idea, weigh arguments, and devise solutions.
-8. We wisely use our time to work on the task.
-9. We monitor our progress and contemplate our next step.
+1. Tots som iguals i ens respectem mútuament.
+2. Afosterim una bona atmosfera fins i tot quan pensem diferentment.
+3. Tots som responsables del treball de grup. En els grups amb èxit, tots els membres tenen un sentiment de responsabilitat conjunta o compartida pels resultats del treball de grup.
+4. Ajudem a tots a contribuir al treball de grup.
+5. Estem empecinats a implicar tothom en la presa de decisions.
+6. Com més idees considerem, més segurs estem que hem seleccionat la millor.
+7. Exposem cada idea, pesoem arguments i ideam solucions.
+8. Utilitzem sàviament el nostre temps per treballar en la tasca.
+9. Monitoritzem el nostre progrés i contemplem el nostre següent pas.
 
-The successful collaboration rules have to be complied with to complete the task:
+Les regles exitoses de col·laboració s'han de complir per completar la tasca:
 
-* Share responsibilities equally
-* Listen actively and respect each other's ideas
-* Make decisions together
-* Stay focused on the task
-* Support each other and solve problems as a pair
+* Compartir responsabilitats de manera igualitària
+* Escoltar activament i respectar les idees de cada altre
+* Prendre decisions conjuntament
+* Mantenir-se enfocat en la tasca
+* Suporteu-vos mútuament i resoleu problemes com a parella

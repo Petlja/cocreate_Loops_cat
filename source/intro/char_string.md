@@ -1,19 +1,19 @@
-# Characters and strings
+# Caràcters i cadenes
 
-Understanding how characters and strings are represented will help you to
-handle text correctly in the following lesson, ensuring proper data processing.
+Entendre com es representen els caràcters i les cadenes us ajudarà a
+tractar el text correctament a la lliçó següent, garantint un processament de dades adequat.
 
-The character data type, commonly referred to as char, is used to represent
-individual characters. Since computers can only store binary values, characters
-must be encoded as numbers. In modern computer systems, either ASCII or Unicode
-encoding schemes are used. Older programming languages (e.g., C) typically rely
-on ASCII, while modern languages (e.g., C#) support Unicode.
+El tipus de dades de caràcter, comunament anomenat char, s'utilitza per representar
+caràcters individuals. Com que els ordinadors només poden emmagatzemar valors binaris, els caràcters
+han de ser codificats com a nombres. Als sistemes informàtics moderns s'utilitzen els esquemes de
+codificació ASCII o Unicode. Els llenguatges de programació més antics (p. ex., C) utilitzen típicament
+ASCII, mentre que els llenguatges moderns (p. ex., C#) admeten Unicode.
 
 ## ASCII
 
-ASCII *(American Standard Code for Information Interchange)* is a 7-bit binary
-code, represented in memory with 8 bits (one byte). It defines 128 characters,
-including letters, digits, punctuation marks, and control characters:
+ASCII *(American Standard Code for Information Interchange)* és un codi binari de 7 bits,
+representat en memòria amb 8 bits (un byte). Defineix 128 caràcters,
+incloent lletres, dígits, signes de puntuació i caràcters de control:
 
 ```text
 DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
@@ -54,11 +54,11 @@ DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
 
 ## Unicode
 
-Unicode is an extended character set that includes all ASCII codes as its first
-part. In Unicode, the first 128 code values (U+0000 to U+007F) are completely
-identical to ASCII codes. Beyond that, Unicode defines more than 150,000
-characters from writing systems around the world. For example, the specific
-Latin characters of the Serbian alphabet are defined like this...
+Unicode és un conjunt de caràcters ampliat que inclou tots els codis ASCII com a primera
+part. A Unicode, els primers 128 valors de codi (U+0000 a U+007F) són completament
+idèntics als codis ASCII. Més enllà d'això, Unicode defineix més de 150.000
+caràcters de sistemes d'escriptura de tot el món. Per exemple, els caràcters llatins
+específics de l'alfabet serbi es defineixen així...
 
 | Code   | Symbol | DEC     |
 |--------|--------|---------|
@@ -73,7 +73,7 @@ Latin characters of the Serbian alphabet are defined like this...
 | U+017D | Ž      | 381     |
 | U+017E | ž      | 382     |
 
-...Latin letters written with two characters are defined like this...
+...les lletres llatines escrites amb dos caràcters es defineixen així...
 
 | Code   | Symbol | DEC     |
 |--------|--------|---------|
@@ -87,7 +87,7 @@ Latin characters of the Serbian alphabet are defined like this...
 | U+01CB | ǋ      | 459     |
 | U+01CC | ǌ      | 460     |
 
-...and the Cyrillic characters of the Serbian alphabet are defined like this:
+...i els caràcters ciríl·lics de l'alfabet serbi es defineixen així:
 
 | Code   | Symbol | DEC     |
 |--------|--------|---------|
@@ -152,17 +152,17 @@ Latin characters of the Serbian alphabet are defined like this...
 | U+045F | џ      | 1119    |
 | U+0448 | ш      | 1096    |
 
-Although some Latin and Cyrillic letters appear to be the same, their Unicode
-code values are different. For example, the Latin capital letter A is encoded
-as U+0041, while the Cyrillic capital letter A is encoded as U+0410.
+Tot i que algunes lletres llatines i ciríl·liques semblen iguals, els seus valors de codi Unicode
+són diferents. Per exemple, la lletra majúscula llatina A es codifica
+com U+0041, mentre que la lletra majúscula ciríl·lica A es codifica com U+0410.
 
-## Strings
+## Cadenes
 
-A string is a sequence of characters arranged in a specific order. Each
-character can be a letter, digit, punctuation mark, whitespace, or symbol.
-Strings are fundamental in computing because they represent text, file names,
-user input, and much more.
+Una cadena és una seqüència de caràcters disposats en un ordre específic. Cada
+caràcter pot ser una lletra, un dígit, un signe de puntuació, un espai en blanc o un símbol.
+Les cadenes són fonamentals en la informàtica perquè representen text, noms de fitxers,
+entrada de l'usuari i molt més.
 
-A string is typically represented as a contiguous block of memory. Some systems
-terminate strings with a special marker like a null character `'\0'` to
-indicate the end, while others may store the length explicitly.
+Una cadena es representa normalment com un bloc de memòria contigu. Alguns sistemes
+terminen les cadenes amb un marcador especial com el caràcter nul `'\0'` per
+indicar el final, mentre que d'altres poden emmagatzemar la longitud explícitament.

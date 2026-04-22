@@ -1,65 +1,65 @@
-# Pair Programming in the Classroom
+# Programació en parella a l'aula
 
-In IT companies today, Agile methodology is one of the most popular and widely
-used software development methodologies — especially where the teams need to
-deliver working software quickly, collaboratively, and adaptively. **Pair
-programming** is a core practice in Extreme Programming (XP), which is one
-of the Agile methodologies.
+A les empreses informàtiques actuals, la metodologia Àgil és una de les més populars i àmpliament
+utilitzades en el desenvolupament de programari — especialment quan els equips necessiten
+lliurar programari funcional de manera ràpida, col·laborativa i adaptativa. La **programació
+en parella** és una pràctica fonamental en Extreme Programming (XP), que és una
+de les metodologies Àgils.
 
-It is a collaborative software development technique where two developers work
-together at one computer. One developer, called the **driver**, writes the code
-and focuses on syntax, while the other developer, called the **navigator**,
-reviews each line of code as it is typed, looks out for mistakes, asks
-questions, and suggests improvements. The two developers switch roles
-frequently.
+És una tècnica de desenvolupament de programari col·laboratiu on dos desenvolupadors treballen
+junts en un ordinador. Un desenvolupador, anomenat el **pilot**, escriu el codi
+i se centra en la sintaxi, mentre que l'altre desenvolupador, anomenat el **navegant**,
+revisa cada línia de codi a mesura que s'escriu, busca errors, fa
+preguntes i suggereix millores. Els dos desenvolupadors intercanvien rols
+freqüentment.
 
-It is very easy to transfer this practice from IT companies to high school
-computer classrooms. In the classroom, two students share one computer to solve
-a programming task together. One student types the code, while the other checks
-the code, gives suggestions, and thinks about the next steps. After each
-subtask, they switch roles. Pair programming helps students learn by working
-together, practicing teamwork, sharing ideas, and seeing different ways to
-solve the same problems.
+És molt fàcil transferir aquesta pràctica de les empreses informàtiques a les aules d'informàtica
+de secundària. A l'aula, dos estudiants comparteixen un ordinador per resoldre
+una tasca de programació junts. Un estudiant escriu el codi, mentre que l'altre comprova
+el codi, fa suggeriments i pensa en els passos següents. Després de cada
+subtasca, intercanvien rols. La programació en parella ajuda els estudiants a aprendre treballant
+junts, practicant el treball en equip, compartint idees i veient diferents maneres de
+resoldre els mateixos problemes.
 
-## Learning Objectives
+## Objectius d'aprenentatge
 
-- To understand the structure and purpose of loops, and their use in manipulation and transformation of the text.
-- To understand the principles behind simple cryptographic algorithms and to implement these algorithms in a chosen programming language using loops.
-- To understand how computers protect privacy and prevent misuse of information and how text can be hidden, scrambled, and protected from unauthorized access.
+- Comprendre l'estructura i el propòsit dels bucles, i el seu ús en la manipulació i transformació del text.
+- Comprendre els principis darrere dels algoritmes criptogràfics simples i implementar aquests algoritmes en un llenguatge de programació escollit utilitzant bucles.
+- Comprendre com els ordinadors protegeixen la privacitat i prevenen l'ús indegut de la informació i com el text es pot ocultar, barrejar i protegir de l'accés no autoritzat.
 
-## Learning Outcomes
+## Resultats d'aprenentatge
 
-After completing the lesson, students will be able to:
+Després de completar la lliçó, els estudiants seran capaços de:
 
-- Correctly write loop-based code that implements a Caesar cipher with encryption and decryption functionality.
-- Write and explain a loop-based implementation of an XOR cipher.
-- Construct a Skytale cipher using loops.
-- Identify which type of loop is appropriate for different tasks involving text processing.
-- Effectively work in pairs applying pair programming, effectively communicate, and present results in a clear and confident manner.
+- Escriure correctament codi basat en bucles que implementi un xifratge Cèsar amb funcionalitat de xifratge i desxifratge.
+- Escriure i explicar una implementació basada en bucles d'un xifratge XOR.
+- Construir un xifratge Escítala utilitzant bucles.
+- Identificar quin tipus de bucle és apropiat per a diferents tasques que impliquen el processament de text.
+- Treballar eficaçment en parelles aplicant la programació en parella, comunicar-se eficaçment i presentar els resultats de manera clara i segura.
 
 
-## Benefits for Students
+## Beneficis per als estudiants
 
-- **Peer Learning:** Students learn from each other. Beginners benefit from
-working with more experienced classmates, and everyone strengthens their
-understanding by explaining their thought process. Also, through shared
-knowledge the problem-solving will be faster.
-- **Better Solution Quality:** A second pair of eyes helps catch errors early.
-Immediate feedback often leads to better solutions and cleaner code.
-- **Improved Engagement:** Pair work keeps both students active and focused.
-Communicating ideas helps deepen understanding and builds teamwork skills.
+- **Aprenentatge entre iguals:** Els estudiants aprenen els uns dels altres. Els principiants es beneficien de
+treballar amb companys de classe més experimentats, i tothom reforça la seva
+comprensió explicant el seu procés de pensament. A més, a través del
+coneixement compartit la resolució de problemes serà més ràpida.
+- **Millor qualitat de la solució:** Un segon parell d'ulls ajuda a detectar errors aviat.
+La retroalimentació immediata sovint condueix a millors solucions i codi més net.
+- **Major implicació:** El treball en parella manté tots dos estudiants actius i concentrats.
+Comunicar idees ajuda a aprofundir la comprensió i desenvolupa habilitats de treball en equip.
 
-## Challenges in the Classroom
+## Reptes a l'aula
 
-- **Personality Clashes:** Differences in communication style or skill level
-can lead to frustration. Students must learn to work respectfully, even when
-they disagree.
-- **Uneven Participation:** One student may try to take over. Teachers must
-supervise regular role switching to ensure both students are equally involved.
-- **Fatigue:** Long sessions can be mentally demanding. Well-scoped tasks help
-maintain focus and energy.
+- **Xocs de personalitat:** Les diferències en l'estil de comunicació o el nivell d'habilitat
+poden provocar frustració. Els estudiants han d'aprendre a treballar respectuosament, fins i tot quan
+no estan d'acord.
+- **Participació desigual:** Un estudiant pot intentar prendre el control. Els professors han de
+supervisar l'intercanvi regular de rols per assegurar-se que tots dos estudiants estiguin igualment implicats.
+- **Fatiga:** Les sessions llargues poden ser mentalment exigents. Les tasques ben delimitades ajuden
+a mantenir la concentració i l'energia.
 
-Best pair programming practices recommend switching roles after each subtask,
-to keep both students engaged. Students should communicate out loud, openly and
-respectfully, explaining what they’re doing or thinking. If both students are
-stuck they should ask for teacher’s help — that is also the part of learning!
+Les millors pràctiques de programació en parella recomanen intercanviar rols després de cada subtasca,
+per mantenir tots dos estudiants implicats. Els estudiants han de comunicar-se en veu alta, obertament i
+respectuosament, explicant el que estan fent o pensant. Si tots dos estudiants
+estan encallats, han de demanar ajuda al professor — això també forma part de l'aprenentatge!
