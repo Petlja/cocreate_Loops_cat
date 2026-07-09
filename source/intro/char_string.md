@@ -1,19 +1,12 @@
 # Caràcters i cadenes
 
-Entendre com es representen els caràcters i les cadenes us ajudarà a
-tractar el text correctament a la lliçó següent, garantint un processament de dades adequat.
+Entendre com es representen els caràcters i les cadenes de text t'ajudarà a processar text correctament a la següent lecció i t'assegurarà que tractis les dades de manera adequada.
 
-El tipus de dades de caràcter, comunament anomenat char, s'utilitza per representar
-caràcters individuals. Com que els ordinadors només poden emmagatzemar valors binaris, els caràcters
-han de ser codificats com a nombres. Als sistemes informàtics moderns s'utilitzen els esquemes de
-codificació ASCII o Unicode. Els llenguatges de programació més antics (p. ex., C) utilitzen típicament
-ASCII, mentre que els llenguatges moderns (p. ex., C#) admeten Unicode.
+El tipus de dades per a caràcters, conegut com char, s'utilitza per representar caràcters individuals. Com que els ordinadors només poden emmagatzemar valors binaris, els caràcters han de codificar-se com a nombres. En els sistemes informàtics moderns s'utilitzen esquemes de codificació ASCII o Unicode. Els llenguatges de programació més antics (p. ex., C) generalment utilitzen ASCII, mentre que els llenguatges moderns (p. ex., C#) suporten Unicode.
 
 ## ASCII
 
-ASCII *(American Standard Code for Information Interchange)* és un codi binari de 7 bits,
-representat en memòria amb 8 bits (un byte). Defineix 128 caràcters,
-incloent lletres, dígits, signes de puntuació i caràcters de control:
+ASCII *(American Standard Code for Information Interchange)* és un codi binari de 7 bits que es representa en memòria amb 8 bits (un byte). Defineix 128 caràcters, que inclouen lletres, dígits, signes de puntuació i caràcters de control:
 
 ```text
 DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
@@ -54,14 +47,10 @@ DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH    DEC OCT HEX CH
 
 ## Unicode
 
-Unicode és un conjunt de caràcters ampliat que inclou tots els codis ASCII com a primera
-part. A Unicode, els primers 128 valors de codi (U+0000 a U+007F) són completament
-idèntics als codis ASCII. Més enllà d'això, Unicode defineix més de 150.000
-caràcters de sistemes d'escriptura de tot el món. Per exemple, els caràcters llatins
-específics de l'alfabet serbi es defineixen així...
+Unicode és un conjunt de caràcters expandit que inclou tots els codis ASCII a la seva primera part. A Unicode, els primers 128 valors de codi (U+0000 a U+007F) són completament idèntics als codis ASCII. A més d'això, Unicode defineix més de 150.000 caràcters de sistemes d'escriptura de tot el món. Per exemple, els caràcters llatins específics de l'alfabet serbi es defineixen de la següent manera:
 
-| Code   | Symbol | DEC     |
-|--------|--------|---------|
+| Codi   | Símbol | DEC     |
+|--------|--------|----------|
 | U+0106 | Ć      | 262     |
 | U+0107 | ć      | 263     |
 | U+010C | Č      | 268     |
@@ -73,10 +62,10 @@ específics de l'alfabet serbi es defineixen així...
 | U+017D | Ž      | 381     |
 | U+017E | ž      | 382     |
 
-...les lletres llatines escrites amb dos caràcters es defineixen així...
+...Les lletres llatines escrites amb dos caràcters es defineixen així:
 
-| Code   | Symbol | DEC     |
-|--------|--------|---------|
+| Codi   | Símbol | DEC     |
+|--------|--------|----------|
 | U+01C4 | Ǆ      | 452     |
 | U+01C5 | ǅ      | 453     |
 | U+01C6 | ǆ      | 454     |
@@ -89,8 +78,8 @@ específics de l'alfabet serbi es defineixen així...
 
 ...i els caràcters ciríl·lics de l'alfabet serbi es defineixen així:
 
-| Code   | Symbol | DEC     |
-|--------|--------|---------|
+| Codi   | Símbol | DEC     |
+|--------|--------|----------|
 | U+0410 | А      | 1040    |
 | U+0411 | Б      | 1041    |
 | U+0412 | В      | 1042    |
@@ -152,17 +141,10 @@ específics de l'alfabet serbi es defineixen així...
 | U+045F | џ      | 1119    |
 | U+0448 | ш      | 1096    |
 
-Tot i que algunes lletres llatines i ciríl·liques semblen iguals, els seus valors de codi Unicode
-són diferents. Per exemple, la lletra majúscula llatina A es codifica
-com U+0041, mentre que la lletra majúscula ciríl·lica A es codifica com U+0410.
+És important notar que tot i que algunes lletres llatines i ciríl·liques es veu igual, els seus valors Unicode són diferents. Per exemple, la lletra A majúscula llatina es codifica com U+0041, mentre que la lletra A majúscula ciríl·lica es codifica com U+0410.
 
 ## Cadenes
 
-Una cadena és una seqüència de caràcters disposats en un ordre específic. Cada
-caràcter pot ser una lletra, un dígit, un signe de puntuació, un espai en blanc o un símbol.
-Les cadenes són fonamentals en la informàtica perquè representen text, noms de fitxers,
-entrada de l'usuari i molt més.
+Una cadena és una seqüència de caràcters ordenats en un ordre particular. Cada caràcter pot ser una lletra, un dígit, un signe de puntuació, un espai, etc. Les cadenes són fonamentals en la informàtica perquè representen text, noms de fitxers, entrada de l'usuari i molt més.
 
-Una cadena es representa normalment com un bloc de memòria contigu. Alguns sistemes
-terminen les cadenes amb un marcador especial com el caràcter nul `'\0'` per
-indicar el final, mentre que d'altres poden emmagatzemar la longitud explícitament.
+Una cadena es representa generalment com un bloc continu de memòria. Alguns sistemes terminen les cadenes amb un caràcter especial, comunament el caràcter nul '\0' (en C/C++), mentre que altres emmagatzemen la longitud de la cadena com a part del tipus de dades (en Python o C#).

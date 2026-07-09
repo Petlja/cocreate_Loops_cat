@@ -1,65 +1,55 @@
-# Programació en parella a l'aula
+# Col·laboració en la solució de tasques - Programació en parella a l'aula
 
-A les empreses informàtiques actuals, la metodologia Àgil és una de les més populars i àmpliament
-utilitzades en el desenvolupament de programari — especialment quan els equips necessiten
-lliurar programari funcional de manera ràpida, col·laborativa i adaptativa. La **programació
-en parella** és una pràctica fonamental en Extreme Programming (XP), que és una
-de les metodologies Àgils.
+A les empreses de TI actuals, la metodologia àgil (Agile en anglès) és una de les més populars i exteses.
 
-És una tècnica de desenvolupament de programari col·laboratiu on dos desenvolupadors treballen
-junts en un ordinador. Un desenvolupador, anomenat el **pilot**, escriu el codi
-i se centra en la sintaxi, mentre que l'altre desenvolupador, anomenat el **navegant**,
-revisa cada línia de codi a mesura que s'escriu, busca errors, fa
-preguntes i suggereix millores. Els dos desenvolupadors intercanvien rols
-freqüentment.
+**La programació en parella** és una de les pràctiques àgils més interessants.
 
-És molt fàcil transferir aquesta pràctica de les empreses informàtiques a les aules d'informàtica
-de secundària. A l'aula, dos estudiants comparteixen un ordinador per resoldre
-una tasca de programació junts. Un estudiant escriu el codi, mentre que l'altre comprova
-el codi, fa suggeriments i pensa en els passos següents. Després de cada
-subtasca, intercanvien rols. La programació en parella ajuda els estudiants a aprendre treballant
-junts, practicant el treball en equip, compartint idees i veient diferents maneres de
-resoldre els mateixos problemes.
+És una tècnica de desenvolupament de programari col·laboratiu en què dos programadors treballen junts en una sola computadora. Un programador (el "controlador") escriu el codi, mentre que l'altre (el "navegador") revisa cada línia a mesura que s'escriu, busca errors, fa preguntes i suggereix millores. Els rols s'alternen regularment perquè tots dos programadors practiquin ambdues funcions.
 
-## Objectius d'aprenentatge
+Aquesta pràctica és molt fàcil de transferir des de les empreses de TI a les aules d'informàtica. A l'aula, dos estudiants divideixen els rols:
 
-- Comprendre l'estructura i el propòsit dels bucles, i el seu ús en la manipulació i transformació del text.
-- Comprendre els principis darrere dels algoritmes criptogràfics simples i implementar aquests algoritmes en un llenguatge de programació escollit utilitzant bucles.
-- Comprendre com els ordinadors protegeixen la privacitat i prevenen l'ús indegut de la informació i com el text es pot ocultar, barrejar i protegir de l'accés no autoritzat.
+- El **"controlador"** escriu el codi,
+- El **"navegador"** revisa cada línia, busca errors i suggereix millores.
 
-## Resultats d'aprenentatge
+```{infonote} 
+Per dominar amb èxit aquesta lecció, serà necessari que treballis en parella.
+```
 
-Després de completar la lliçó, els estudiants seran capaços de:
+## Resultats i temps de realització
 
-- Escriure correctament codi basat en bucles que implementi un xifratge Cèsar amb funcionalitat de xifratge i desxifratge.
-- Escriure i explicar una implementació basada en bucles d'un xifratge XOR.
-- Construir un xifratge Escítala utilitzant bucles.
-- Identificar quin tipus de bucle és apropiat per a diferents tasques que impliquen el processament de text.
-- Treballar eficaçment en parelles aplicant la programació en parella, comunicar-se eficaçment i presentar els resultats de manera clara i segura.
+**Temps necessari:** 3 hores de classe (135 minuts)
 
+### Resultats
 
-## Beneficis per als estudiants
+- Comprendre l'estructura i la finalitat dels bucles, així com el seu ús en la manipulació i transformació de text.
+- Comprendre els principis dels algoritmes criptogràfics simples i implementar-los en el llenguatge de programació escollit.
+- Comprendre com els ordinadors protegeixen la privacitat i prevenen l'abús de la informació, així com com es pot amagar el text mitjançant algoritmes de xifratge.
 
-- **Aprenentatge entre iguals:** Els estudiants aprenen els uns dels altres. Els principiants es beneficien de
-treballar amb companys de classe més experimentats, i tothom reforça la seva
-comprensió explicant el seu procés de pensament. A més, a través del
-coneixement compartit la resolució de problemes serà més ràpida.
-- **Millor qualitat de la solució:** Un segon parell d'ulls ajuda a detectar errors aviat.
-La retroalimentació immediata sovint condueix a millors solucions i codi més net.
-- **Major implicació:** El treball en parella manté tots dos estudiants actius i concentrats.
-Comunicar idees ajuda a aprofundir la comprensió i desenvolupa habilitats de treball en equip.
+## Resultats esperats
 
-## Reptes a l'aula
+Al completar la lecció, els estudiants seran capaços de:
 
-- **Xocs de personalitat:** Les diferències en l'estil de comunicació o el nivell d'habilitat
-poden provocar frustració. Els estudiants han d'aprendre a treballar respectuosament, fins i tot quan
-no estan d'acord.
-- **Participació desigual:** Un estudiant pot intentar prendre el control. Els professors han de
-supervisar l'intercanvi regular de rols per assegurar-se que tots dos estudiants estiguin igualment implicats.
-- **Fatiga:** Les sessions llargues poden ser mentalment exigents. Les tasques ben delimitades ajuden
-a mantenir la concentració i l'energia.
+- Escriure correctament el codi amb bucles que implementi un xifrador de Cèsar amb una funció de xifratge i desxifratge.
+- Escriure i explicar la implementació del xifratge XOR usant bucles.
+- Construir un xifratge d'Escítala usant bucles.
+- Reconèixer quin tipus de bucle és més adequat per a diferents tasques de processament de text.
+- Treballar eficaçment en parella aplicant la programació col·laborativa, comunicar-se amb èxit i presentar resultats de manera clara i professional.
 
-Les millors pràctiques de programació en parella recomanen intercanviar rols després de cada subtasca,
-per mantenir tots dos estudiants implicats. Els estudiants han de comunicar-se en veu alta, obertament i
-respectuosament, explicant el que estan fent o pensant. Si tots dos estudiants
-estan encallats, han de demanar ajuda al professor — això també forma part de l'aprenentatge!
+```{learnmorenote} Per als mestres
+
+## Avantatges del treball en parella per als estudiants
+
+- **Aprenentatge de companys:** Els estudiants aprenen els uns dels altres. Els principiants es beneficien de treballar amb companys més experimentats, mentre que els estudiants més avançats reforcen la seva comprensió ensenyant als altres.
+- **Solucions de millor qualitat:** Un segon parell d'ulls ajuda a detectar errors més aviat. La retroalimentació immediata aprofundeix la comprensió.
+- **Major compromís:** El treball en parella manté ambdós estudiants actius i enfocats. La comunicació d'idees aprofundeix l'aprenentatge.
+
+## Desafiaments a l'aula
+
+¡Els mestres han d'estar atents als següents desafiaments potencials a l'implementar la programació en parella!
+
+- **Diferències de personalitat:** Les diferències en l'estil de comunicació o el nivell de coneixement poden conduir a la frustració. Els estudiants han de ser educats sobre la importància de la comunicació clara.
+- **Participació desigual:** Un estudiant pot intentar assumir el control. Els mestres han de monitorar els canvis regulars de rols durant la sessió de treball.
+- **Fatiga:** Les sessions llargues poden ser mentalment exhaustes. Les tasques ben definides ajuden a mantenir l'enfoc i l'energia.
+```
+
+La millor pràctica de la programació en parella recomana canviar de rol després de cada subtasca perquè ambdós estudiants romanguin compromesos i en condicions d'igualtat.
