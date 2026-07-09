@@ -1,8 +1,6 @@
 # XOR
 
-XOR *(OR exclusiu)* és una operació lògica que produeix cert (1) només quan
-les entrades difereixen. És una operació binària fonamental amb importants aplicacions
-en informàtica i criptografia.
+XOR *(exclusiva O)* és una operació lògica que produeix veritat (1) només quan les entrades difereixen. És una operació binària fonamental utilitzada en criptografia.
 
 | A | B | A XOR B |
 | - | - | :-----: |
@@ -11,27 +9,25 @@ en informàtica i criptografia.
 | 1 | 0 | 1       |
 | 1 | 1 | 0       |
 
-Per exemple, per xifrar la paraula "HELLO" utilitzant la clau "KEY", primer heu de
-convertir `HELLO` a binari...
+Per exemple, per xifrar la paraula "HELLO" utilitzant la clau "KEY", primer debes convertir `HELLO` a forma binària...
 
-| Char | ASCII | Binary   |
-| ---- | ----- | -------- |
-| H    | 72    | 01001000 |
-| E    | 69    | 01000101 |
-| L    | 76    | 01001100 |
-| L    | 76    | 01001100 |
-| O    | 79    | 01001111 |
+| Caràcter | ASCII | Binari   |
+| -------- | ----- | -------- |
+| H        | 72    | 01001000 |
+| E        | 69    | 01000101 |
+| L        | 76    | 01001100 |
+| L        | 76    | 01001100 |
+| O        | 79    | 01001111 |
 
-...després convertiu `KEY` a binari...
+...després converteix `KEY` a forma binària...
 
-| Char | ASCII | Binary   |
-| ---- | ----- | -------- |
-| K    | 75    | 01001011 |
-| E    | 69    | 01000101 |
-| Y    | 89    | 01011001 |
+| Caràcter | ASCII | Binari   |
+| -------- | ----- | -------- |
+| K        | 75    | 01001011 |
+| E        | 69    | 01000101 |
+| Y        | 89    | 01011001 |
 
-...i finalment feu el xifratge - XOR de cada caràcter amb la clau, repetint la
-clau tantes vegades com sigui necessari:
+...i finalment realitza el xifratge – aplica XOR a cada caràcter amb la clau, repetint la clau tantes vegades com sigui necessari:
 
 ```text
 H ⊕ K: 01001000 ⊕ 01001011 = 00000011 (ASCII 3)
@@ -41,12 +37,9 @@ L ⊕ K: 01001100 ⊕ 01001011 = 00000111 (ASCII 7)
 O ⊕ E: 01001111 ⊕ 01000101 = 00001010 (ASCII 10)
 ```
 
-El text xifrat resultant consisteix en caràcters ASCII no imprimibles amb
-valors decimals 3, 0, 21, 7 i 10. Si un atacant interceptés aquest missatge,
-només veuria dades binàries il·legibles, ja que els caràcters no són
-imprimibles.
+El text xifratge resultant consta de caràcters ASCII no imprimibles amb valors decimals 3, 0, 21, 7 i 10. Si necessites veure aquests valors com a nombres, pots mostrar-los com a la seva representació binària o hexadecimal.
 
-Per desxifrar el text xifrat heu de fer XOR del text xifrat amb la mateixa clau:
+Per desxifrar el text xifratge, debus aplicar XOR al text xifratge amb la mateixa clau:
 
 ```text
 3  ⊕ K: 00000011 ⊕ 01001011 = 01001000 (ASCII 72 → H)
@@ -56,43 +49,30 @@ Per desxifrar el text xifrat heu de fer XOR del text xifrat amb la mateixa clau:
 10 ⊕ E: 00001010 ⊕ 01000101 = 01001111 (ASCII 79 → O)
 ```
 
-L'operació XOR és autoinversa — aplicar XOR dues vegades amb la mateixa clau
-restaureix les dades originals.
+L'operació XOR és autoinversa — aplicar XOR dues vegades amb la mateixa clau retorna les dades originals.
 
-En aplicacions del món real, reutilitzar la mateixa clau per a múltiples missatges fa que
-el xifratge XOR sigui vulnerable a l'anàlisi de freqüència i als atacs de text pla conegut.
-El XOR sol no proporciona una seguretat forta tret que la clau s'administri adequadament
-i sigui almenys tan llarga com el missatge — com en un bloc d'un sol ús. No obstant això, per a
-propòsits educatius i demostracions bàsiques de principis criptogràfics, XOR
-és simple i ideal.
+En la pràctica, reutilitzar la mateixa clau per a més d'un missatge fa que el xifratge XOR sigui vulnerable a l'anàlisi de freqüència i a altres atacs criptogràfics. Però és un concepte fonamental en criptografia moderna.
 
-## Assignació simple
+## Tasca simple
 
-Creeu una aplicació de consola en qualsevol llenguatge de programació per xifrar i desxifrar
-missatges utilitzant l'operació XOR.
+Crea una aplicació de consola en qualsevol llenguatge de programació per xifrar i desxifrar missatges utilitzant el xifratge XOR.
 
-L'alfabet permès per als missatges (tant per al text pla com per a la clau) inclou només
-lletres angleses minúscules:
+L'alfabet permès per als missatges (tant per al text pla com per a la clau) inclou només les lletres minúscules de l'alfabet anglès:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Els espais, les lletres majúscules, els números i altres caràcters no estan permesos.
+No es permeten espais, lletres majúscules, nombres ni altres caràcters.
 
-A la primera línia de l'entrada de l'usuari hi haurà un missatge `m` de no més de
-cent caràcters ASCII per al text pla o 800 bits per al text xifrat, a la
-segona línia hi haurà una clau `k` de no més de cinc caràcters, i a la
-tercera línia hi haurà un enter `s`, que representa l'operació. Si
-$s=1$ llavors `m` és text pla i ha de ser xifrat, i si $s=2$, llavors `m` és
-text xifrat en binari i ha de ser desxifrat.
+A la primera línia d'entrada hi haurà un missatge `m` de no més de cent caràcters ASCII per a text pla o 800 bits per a text xifratge. A la segona línia hi haurà una clau `k` de no més de cinc caràcters, i a la tercera línia hi haurà un enter `s`, que representa l'operació. Si $s=1$ aleshores `m` és text pla i ha de xifrarse, i si $s=2$, aleshores `m` és text xifratge en binari i ha de desxifrarse.
 
 ### Exemple de prova 1
 
 Si l'entrada és:
 
 ```text
-nikolatesla
+nikolateslaa
 ser
 1
 ```
@@ -116,59 +96,56 @@ ser
 la sortida ha de ser:
 
 ```text
-nikolatesla
+nikolateslaa
 ```
 
-## Comenceu l'assignació
+## Comença la tasca
 
-[Implementeu el xifratge aquí](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
+[Implementa el xifratge aquí](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
 
-## Consells per a la solució
+## Pistes per a la solució
 
-Cada caràcter s'emmagatzema en memòria com un valor ASCII de 8 bits (per a les lletres
-minúscules a–z, els codis van del 97 al 122). Per xifrar un caràcter, preneu el seu
+Cada caràcter s'emmagatzema en memòria com a un valor ASCII de 8 bits (per a lletres minúscules
+a–z, els codis van del 97 al 122). Per xifrar un caràcter, pren el seu
 valor ASCII i el valor ASCII del caràcter de clau corresponent (ciclant
-pel conjunt de la clau), apliqueu XOR (^) entre ells i produïu el resultat com un número binari de 8 bits.
+per la clau), aplica XOR (^) entre ells i mostra el resultat com a un nombre binari de 8 bits.
 
-Per desxifrar, seguiu el procés invers: preneu cada bloc binari de 8 bits del
-text xifrat, convertiu-lo de nou a un enter (0–255), feu XOR amb el valor ASCII del
-caràcter de clau corresponent i convertiu el resultat de nou a un caràcter.
+Per desxifrar, segueix el procés invers: pren cada bloc binari de 8 bits del
+text xifratge, converteix-ho de nou a un enter (0–255), aplica XOR amb el valor ASCII del
+caràcter de clau corresponent i converteix el resultat de nou a un caràcter.
 
-## Assignacions avançades de XOR (opcionals)
+## Tasques avançades de XOR (opcional)
 
-### Amplieu l'alfabet permès
+### Ampliar l'alfabet permès
 
-Permeteu lletres minúscules i majúscules, espais, números i puntuació.
-Els caràcters que no són lletres es fan XOR amb la clau de la mateixa manera.
+Permit lletres minúscules i majúscules, espais, nombres i signes de puntuació. Els caràcters que no són lletres se sotmeten a XOR amb la clau de la mateixa manera.
 
-## Utilitzeu funcions
+## Usar funcions
 
-Creeu dues funcions: `encrypt()` per xifrar missatges i `decrypt()` per
-desxifrar missatges. Utilitzeu les funcions creades al vostre programa principal.
+Crea dues funcions: `encrypt()` per xifrar missatges i `decrypt()` per desxifrar missatges. Usa les funcions creades en el teu programa principal.
 
-### Creeu una classe
+### Crear una classe
 
-Creeu una classe `XorCipher` que:
+Crea una classe `XorCipher` que:
 
-* Emmagatzemi la clau,
-* Proporcioni mètodes `encrypt()` i `decrypt()`,
-* Opcionalment inclogui un auxiliar privat per repetir la clau sobre la longitud del missatge.
+- Emmagatzemi la clau,
+- Proporcioni mètodes `encrypt()` i `decrypt()`,
+- Opcionalment inclou un mètode auxiliar privat per repetir la clau al llarg de la longitud del missatge.
 
-Utilitzeu la classe creada al vostre programa principal.
+Usa la classe creada en el teu programa principal.
 
-### Accepteu arguments de la línia d'ordres
+### Acceptar arguments de línia de comandaments
 
-En lloc d'esperar l'entrada de l'usuari, creeu una aplicació de consola que
-accepti els arguments de la línia d'ordres següents:
+En lloc d'esperar l'entrada de l'usuari, crea una aplicació de consola que accepti els següents arguments de línia de comandaments:
 
 1. argument `m` per especificar el missatge,
 2. argument `k` per especificar la clau, i
 3. argument `s` per especificar l'operació (`1` per xifrar, `2` per desxifrar).
 
-### Xifreu i desxifreu fitxers
+### Xifrar i desxifrar fitxers
 
-Utilitzeu els coneixements adquirits fins ara per crear un programa que pugui:
+Utilitza el coneixement adquirit fins ara per crear un programa que pugui:
 
-* llegir text pla o text xifrat binari d'un fitxer,
-* xifrar-lo o desxifrar-lo amb una clau donada, i
-* escriure el resultat en un nou fitxer.
+- Llegir text pla o binari xifratge d'un fitxer,
+- Xifratge-lo o desxifratge-lo amb la clau donada, i
+- Escriure el resultat en un fitxer nou.
