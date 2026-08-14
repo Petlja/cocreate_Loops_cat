@@ -1,51 +1,36 @@
 # Caesar Cipher
 
-One of the great generals who used coded messages was Julius Caesar, around 50
-BC. When Caesar sent messages to his generals, he encrypted them by shifting
-the letters in the text by a fixed number of places in the alphabet. The
-recipients of the message could decipher it because they knew the shift value
-— while everyone else saw only meaningless text.
+One of the great military commanders who used encrypted messages was Julius Caesar, around 50 BC. He used a simple cipher known as the Caesar cipher to protect military communications. This cipher is also known as a shift cipher because each letter in the plaintext is replaced by a letter some fixed number of positions down or up the alphabet.
 
-For example, if you wrote `NIKOLATESLA` and shifted each letter three places to
-the right:
+For example, if you write `NIKOLATESLA` and shift each letter three places to the right:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
 ```
 
-The letter `N` becomes `K`, `I` becomes `F`, and so on. So, each letter is
-replaced by another letter that is a fixed number of positions further along in
-the alphabet. When the end of the alphabet is reached, the sequence continues
-from the beginning. The result of the shift operation by three letters to the
-right would be the encrypted message `KFHLIXQBPIX`. On the other hand, if each
-letter in the resulting word were shifted three letters to the left:
+Letter `N` becomes `K`, `I` becomes `F`, and so on. So each letter is replaced by another letter which is a certain distance away in the alphabet.
+
+**Decryption** works the same way, but in reverse. To decrypt the ciphertext, shift each letter back three places to the left:
 
 ```text
 A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 ```
 
-The letter `K` becomes `N`, `F` becomes `I`, and so on. The result of the shift
-operation would be the original decrypted message `NIKOLATESLA`.
+Letter `K` becomes `N`, `F` becomes `I`, and so on. The result of this shift is the original decrypted message `NIKOLATESLA`.
 
 ![Caesar Cipher Left Shift](./images/caesar1.png)
 
-## Simple assignment
+## Assignment to think about
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the Caesar cipher.
+Think about how you would create a console application in any programming language that will encrypt and decrypt messages using a Caesar cipher.
 
 ```{infonote}
-First student (*the driver*) should be focused on syntax while writing the
-code for message encryption. Second student (*the navigator*) should review
-each line of code as it is typed, looking for the mistakes, asking questions,
-and suggesting improvements. After that, the students should switch roles,
-and continue with writing decryption code.
+The first student (*driver*) should focus on syntax while typing the code to encrypt the message. The second student (*navigator*) should watch the code, suggest improvements, and ask questions. After encrypting, switch roles to decrypt.
 ```
 
-The allowed alphabet for messages (for plaintext and ciphertext) can include
-only lowercase letters of the English alphabet:
+The allowed alphabet for messages (both for plaintext and ciphertext) can contain only lowercase letters of the English alphabet:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
@@ -53,13 +38,9 @@ only lowercase letters of the English alphabet:
 
 Spaces, uppercase letters, numbers, and other characters are not allowed.
 
-In the first line of the user input there will be a message `m` no longer than
-one hundred characters, in the second line there will be an integer `n` which
-represents the shift value ($1 \leq n < 26$), and in the third line there will
-be an integer `s`, which represents the encryption direction. If $s=1$ then `m`
-should be encrypted, and if $s=2$, then `m` should be decrypted.
+In the first line of input there is a message `m` of at most one hundred characters, in the second line an integer `n` which represents the shift value (1–25), and in the third line an integer `s`, which represents the encryption direction. If `s=1` then `m` should be encrypted, and if `s=2`, then `m` should be decrypted.
 
-### Test example 1
+### Test Example 1
 
 If the input is:
 
@@ -75,7 +56,7 @@ the output should be:
 kfhlixqbpix
 ```
 
-### Test example 2
+### Test Example 2
 
 If the input is:
 
@@ -91,14 +72,9 @@ the output should be:
 nikolatesla
 ```
 
-## Start the assignment
-
-[Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142923)
-
 ## Solution hints
 
-Since there are 26 letters in the English alphabet, the position of each letter
-can be represented by a number from 0 to 25.
+Since the English alphabet has 26 letters, the position of each letter can be represented by a number from 0 to 25.
 
 * a → 0
 * b → 1
@@ -112,10 +88,7 @@ To **encrypt** a letter, you can use the following formula:
 new_letter_position = (current_letter_position + shift_value) mod 26
 ```
 
-`original_position` represents the numeric value of the letter in the alphabet,
-`shift_value` represents number of positions to move (1–25), and `mod 26`
-ensures that the result wraps around to the start of the alphabet if it goes
-past `z`.
+`original_position` represents the numeric value of the letter in the alphabet, `shift_value` represents the number of positions to shift (1–25), and `mod 26` ensures the value wraps around the alphabet.
 
 To **decrypt** a letter, you can use the following formula:
 
@@ -123,64 +96,50 @@ To **decrypt** a letter, you can use the following formula:
 new_letter_position = (current_letter_position - shift_value + 26) mod 26
 ```
 
-Similarly like encryption, but you subtract the shift value, and `+ 26` ensures
-that the value does not become negative before applying `mod 26`.
+Similarly to encryption, but the shift value is subtracted, and `+ 26` ensures the value does not become negative.
 
-## Advanced Caesar Cipher Assignments (optional)
+## More complex Caesar Cipher Assignments (optional)
 
-### Expand the allowed aplhabet
+### Expand the allowed alphabet
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the Caesar cipher. The allowed alphabet for messages (for
-plaintext and ciphertext) can include lowercase and uppercase letters of the
-English alphabet, spaces, numbers, and punctuation!
+Create a console application in any programming language that will encrypt and decrypt messages using the Caesar cipher, but with an expanded alphabet.
 
-The application must encrypt or decrypt only lowercase and uppercase letters.
-Spaces, numbers, and punctuation marks should remain unchanged during
-encryption or decryption.
+The application should encrypt or decrypt only lowercase and uppercase letters. Spaces, numbers, and punctuation marks should remain unchanged.
 
-In the first line of the standard input there will be a message `m` no longer
-than one hundred characters, in the second line there will be an integer `n`
-which represents the shift ($1 \leq n < 26$), and in the third line there will
-be an integer `s`, which represents the encryption direction. If $s=1$ then `m`
-should be encrypted, and if $s=2$, then `m` should be decrypted.
+In the first line of input there is a message `m` of at most one hundred characters, in the second line an integer `n` (the shift value from 1–25), and in the third line an integer `s` (1 for encryption, 2 for decryption).
 
-## Use the functions
+## Use the functions 
 
-Create two functions: one for encrypting messages and one for decrypting
-messages. Use the created functions in your main program.
+Create two functions: one for encrypting messages and one for decrypting messages. Use the created functions in your main program.
+
+Here you can work in pairs - one person should encrypt the message, and the other should decrypt it!
 
 ## Create a Class
 
 Create a `CaesarCipher` class that contains:
 
-* a constructor with a parameter that accepts the shift value and ensures that
-the value is within the allowed range,
-* a private property to store the shift value, with getter and setter methods,
-* a public method to encrypt the message,
-* a public method to decrypt the message, and
-* optionally, include a private method to process messages, which will be used
-by both encryption and decryption methods.
+- a constructor with a parameter that accepts a shift value and ensures that the value is in the allowed range (0–25),
+- a private property for storing the shift value, with getter and setter methods,
+- a public method for encrypting a message,
+- a public method for decrypting a message, and
+- optionally, a private method for processing messages that is used by both methods.
 
-Use the created class in your main program.
+Use the created class in the main program.
 
-## Accept Command Line Arguments
+## Accept command-line arguments
 
-Instead of waiting for the user input, create a console application that
-accepts the following command line arguments:
+Instead of waiting for user input, create a console application that accepts the following command-line arguments:
 
-1. argument `m` for specifying the message,
-2. argument `n` for specifying the shift value (`0` to `25`), and
-3. argument `s` for specifying the shift direction (`1` for encryption, and `2`
-for decryption).
+1. argument `m` for the message,
+2. argument `n` for the shift value (`0` to `25`), and
+3. argument `s` for the encryption direction (`1` for encryption, `2` for decryption).
 
 ## Encrypt and decrypt files
 
-Use the knowledge you gained so far to create a console application for
-encrypting and decrypting text files. Your application should accept the
-following command line arguments:
+Use your knowledge so far to create a console application for encrypting and decrypting text files using the Caesar cipher.
 
-1. argument `m` for specifying the filename (or a path),
-2. argument `n` for specifying the shift value (`0` to `25`), and
-3. argument `s` for specifying the shift direction (`1` for encryption, and `2`
-for decryption).
+The application should accept the following command-line arguments:
+
+1. argument `m` for the file name (or path),
+2. argument `n` for the shift value (`0` to `25`), and
+3. argument `s` for the encryption direction (`1` for encryption, `2` for decryption).
