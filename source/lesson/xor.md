@@ -1,8 +1,6 @@
 # XOR
 
-XOR *(Exclusive OR)* is a logical operation that outputs true (1) only when
-inputs differ. It's a fundamental binary operation with important applications
-in computer science and cryptography.
+XOR *(exclusive OR)* is a logical operation that returns true (1) only when the inputs differ. It is a fundamental binary operation in cryptography.
 
 | A | B | A XOR B |
 | - | - | :-----: |
@@ -11,8 +9,7 @@ in computer science and cryptography.
 | 1 | 0 | 1       |
 | 1 | 1 | 0       |
 
-For example, to encrypt the word "HELLO" using the key "KEY", you should first
-convert `HELLO` to binary...
+For example, to encrypt the word "HELLO" using the key "KEY", you first need to convert `HELLO` to binary form...
 
 | Char | ASCII | Binary   |
 | ---- | ----- | -------- |
@@ -22,7 +19,7 @@ convert `HELLO` to binary...
 | L    | 76    | 01001100 |
 | O    | 79    | 01001111 |
 
-...then convert `KEY` to binary...
+...then convert `KEY` to binary form...
 
 | Char | ASCII | Binary   |
 | ---- | ----- | -------- |
@@ -30,8 +27,7 @@ convert `HELLO` to binary...
 | E    | 69    | 01000101 |
 | Y    | 89    | 01011001 |
 
-...and finally do the encryption - XOR each character with key, repeating the
-key as many times as necessary:
+...and finally perform encryption – XOR each character with the key, repeating the key as many times as necessary:
 
 ```text
 H ⊕ K: 01001000 ⊕ 01001011 = 00000011 (ASCII 3)
@@ -41,12 +37,9 @@ L ⊕ K: 01001100 ⊕ 01001011 = 00000111 (ASCII 7)
 O ⊕ E: 01001111 ⊕ 01000101 = 00001010 (ASCII 10)
 ```
 
-The resulting ciphertext consists of ASCII non-printable characters with
-decimal values 3, 0, 21, 7, and 10. If an attacker intercepted this message,
-they would see only unreadable binary data, since the characters are
-non-printable.
+The resulting ciphertext consists of ASCII non-printable characters with decimal values 3, 0, 21, 7, and 10. If we represent these as binary, the result would be a binary string: 00000011000000000001010100000111000010100.
 
-To decrypt the ciphertext you should XOR ciphertext with same key:
+To decrypt the ciphertext, you need to XOR the ciphertext with the same key:
 
 ```text
 3  ⊕ K: 00000011 ⊕ 01001011 = 01001000 (ASCII 72 → H)
@@ -56,23 +49,15 @@ To decrypt the ciphertext you should XOR ciphertext with same key:
 10 ⊕ E: 00001010 ⊕ 01000101 = 01001111 (ASCII 79 → O)
 ```
 
-The XOR operation is self-inverse — applying XOR twice with the same key
-restores the original data.
+The XOR operation is self-inverse — applying XOR twice with the same key returns the original data.
 
-In real-world applications, reusing the same key for multiple messages makes
-XOR encryption vulnerable to frequency analysis and known-plaintext attacks.
-XOR alone doesn’t provide strong security unless the key is properly managed
-and is at least as long as the message — as in a one-time pad. However, for
-educational purposes and basic demonstrations of cryptographic principles, XOR
-is simple and ideal.
+In practice, reusing the same key for multiple messages makes XOR encryption vulnerable to frequency analysis and other attacks. However, for educational purposes and basic demonstrations of cryptographic principles, XOR is simple and ideal.
 
-## Simple assignment
+## First assignment
 
-Create a console application in any programming language to encrypt and decrypt
-messages using the XOR operation.
+Create a console application in any programming language to encrypt and decrypt messages using the XOR operation.
 
-The allowed alphabet for messages (both plaintext and key) includes only
-lowercase English letters:
+The allowed alphabet for messages (both for plaintext and key) contains only lowercase letters of the English alphabet:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
@@ -80,14 +65,9 @@ lowercase English letters:
 
 Spaces, uppercase letters, numbers, and other characters are not allowed.
 
-In the first line of the user input there will be a message `m` no longer than
-one hundred ASCII characters for plaintext or 800 bits for ciphertext, in the
-second line there will be a key `k` no longer than five characters, and in the
-third line there will be an integer `s`, which represents the operation. If
-$s=1$ then `m` is plaintext and should be encrypted, and if $s=2$, then `m` is
-ciphertext in binary and should be decrypted.
+In the first line of input there is a message `m` of at most one hundred ASCII characters for plaintext or 800 bits for ciphertext. In the second line there is a key `k`. In the third line there is an integer `s` (1 for encryption, 2 for decryption).
 
-### Test example 1
+### Test Example 1
 
 If the input is:
 
@@ -103,7 +83,7 @@ the output should be:
 0001110100001100000110010001110000001001000100110000011100000000000000010001111100000100
 ```
 
-### Test example 2
+### Test Example 2
 
 If the input is:
 
@@ -119,57 +99,48 @@ the output should be:
 nikolatesla
 ```
 
-## Start the assignment
+## Do the assignment
 
 [Implement the cypher here ](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
 
 ## Solution hints
 
-Each character is stored in memory as an 8-bit ASCII value (for lowercase
-letters a–z, the codes range from 97 to 122). To encrypt a character, take its
-ASCII value and the ASCII value of the corresponding key character (cycling
-through the key), apply XOR (^) between them and output the result as an 8-bit
-binary number.
+Each character is stored in memory as an 8-bit ASCII value (for lowercase letters a–z, codes range from 97 to 122). To encrypt, convert each character to its ASCII value, convert that to binary (8 bits), XOR with the corresponding key character's binary representation (repeating the key as needed), and output the result as binary text (no spaces between bits).
 
-To decrypt, follow the reverse process, take each 8-bit binary block from
-ciphertext, convert it back to an integer (0–255), XOR with the ASCII value of
-the corresponding key character and convert the result back to a character.
+For decryption, follow the reverse process: take each 8-bit binary block from the ciphertext, convert it back to an integer (0–255), XOR with the ASCII value of the corresponding key character, and convert the result back to a character.
 
-## Advanced XOR Assignments (optional)
+## More complex XOR Assignments (optional)
 
 ### Expand the allowed alphabet
 
-Allow lowercase and uppercase letters, spaces, numbers, and punctuation.
-Non-letter characters are XORed with the key in the same way.
+Allow lowercase and uppercase letters, spaces, numbers, and punctuation marks. Non-letters are XORed with the key in the same way as letters.
 
 ## Use functions
 
-Create two functions: `encrypt()` for encrypting messages and `decrypt()` for
-decrypting messages. Use the created functions in your main program.
+Create two functions: `encrypt()` for encrypting messages and `decrypt()` for decrypting messages. Use the created functions in your main program.
 
-### Create a Class
+### Create a class
 
-Create an `XorCipher` class that:
+Create a `XorCipher` class that:
 
-* Stores the key,
-* Provides `encrypt()` and `decrypt()` methods,
-* Optionally includes a private helper to repeat the key over the message length.
+- stores the key,
+- provides `encrypt()` and `decrypt()` methods,
+- optionally contains a private helper method for repeating the key over the length of the message.
 
-Use the created class in your main program.
+Use the created class in the main program.
 
-### Accept Command Line Arguments
+### Accept command-line arguments
 
-Instead of waiting for the user input, create a console application that
-accepts the following command line arguments:
+Instead of waiting for user input, create a console application that accepts the following command-line arguments:
 
-1. argument `m` for specifying the message,
-2. argument `k` for specifying the key, and
-3. argument `s` for specifying the operation (`1` to encrypt, `2` to decrypt).
+1. argument `m` for the message,
+2. argument `k` for the key, and
+3. argument `s` for the operation (`1` for encryption, `2` for decryption).
 
-### Encrypt and Decrypt Files
+### Encrypt and decrypt files
 
-Use the knowledge you gained so far to create a program that can:
+Use your knowledge so far to create a program that can:
 
-* read plaintext or binary ciphertext from a file,
-* encrypt or decrypt it with a given key, and
-* write the result back to a new file.
+- read plaintext or binary ciphertext from a file,
+- encrypt or decrypt it with a given key, and
+- write the result to a new file.
