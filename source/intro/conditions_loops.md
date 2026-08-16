@@ -1,16 +1,22 @@
 # Condicions i bucles
 
-Per dominar amb èxit el material sobre xifratge, és necessari que entenguis els conceptes bàsics sobre com funcionen les condicions i els bucles.
+Per seguir amb èxit el material sobre xifratge, cal dominar les idees bàsiques de les condicions i els bucles. Aquests mecanismes permeten que un programa prengui decisions, repeteixi passos i processi text d'una manera controlada. En criptografia, això és essencial: els algoritmes de protecció de dades es basen en regles, comprovacions i repeticions que transformen la informació de forma segura.
 
-¡Anem a recordar alguns conceptes fonamentals! Si encara et resulta confusa aquesta àrea, et recomanem que revisis la lecció a Petlja.
+Repassem-ne alguns fonaments! Si encara no tens clars aquests conceptes, et recomanem revisar abans les lliçons de Petlja dedicades a aquest tema.
 
-L'enllaç a la lecció de Petlja sobre bucles està [aquí](https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844)
-<!--Link za verzije kursa koje nisu na sprskokm https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for -->
+Els diferents tipus de bucles seran útils per a diferents xifratges: de vegades necessitaràs recórrer text caràcter per caràcter, altres vegades repetir passos fins que es compleixi una condició, i en alguns casos combinar bucles i condicions dins del mateix algoritme.
 
-```{learnmorenote} Per als mestres
+## Enllaços de prerequisits
 
-Enllaç a la lecció de Petlja en serbi https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844
-Enllaç per a versions del curs que no estan en serbi https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
+- [Lliçó de Petlja sobre bucles](https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844)
+- [Versió en anglès d'una lliçó introductòria similar](https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for)
+
+```{learnmorenote} Per al professorat
+
+Referències útils per repassar els prerequisits amb l'alumnat:
+
+- Lliçó de Petlja en serbi: https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844
+- Versió per a cursos no disponibles en serbi: https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
 ```
 
 ## Condicions
@@ -134,7 +140,7 @@ for (int i = 0; i <= 9; i++) {
 
 ### El bucle `while`
 
-El bucle `while` (o `while-do`) s'utilitza quan el nombre d'iteracions no es coneix de antuvi. La condició es verifica abans de cada iteració, per la qual cosa es coneix com **bucle amb precondició**.
+El bucle `while` (o `while-do`) s'utilitza quan el nombre d'iteracions no es coneix d'antuvi. La condició es verifica abans de cada iteració, per la qual cosa es coneix com **bucle amb precondició**.
 
 ```text
 while condition do
