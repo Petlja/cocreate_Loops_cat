@@ -1,38 +1,38 @@
 # Condicions i bucles
 
-Per dominar amb èxit el material sobre xifratge, és necessari que entenguis els conceptes bàsics sobre com funcionen les condicions i els bucles.
+Per dominar amb èxit el material sobre xifratge, cal que coneguis els fets bàsics sobre el treball amb condicions i bucles. Les condicions i els bucles són els mecanismes principals que permeten als programes informàtics prendre decisions i repetir determinades accions. Gràcies a les condicions, un programa pot reaccionar de manera diferent segons les dades que rep, mentre que els bucles permeten repetir de manera eficient els mateixos passos diverses vegades. Aquests conceptes són de vital importància en xifratge, ja que els algorismes de protecció de dades es basen en una sèrie de regles, comprovacions i procediments repetitius que garanteixen la seguretat de la informació.
 
-¡Anem a recordar alguns conceptes fonamentals! Si encara et resulta confusa aquesta àrea, et recomanem que revisis la lecció a Petlja.
+Anem a recordar alguns fonaments! Si aquesta zona encara no et queda clara, passa per la lliçó de Petlja dedicada específicament als bucles.
 
-L'enllaç a la lecció de Petlja sobre bucles està [aquí](https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844)
+L'enllaç a la lliçó de Petlja sobre bucles és [aquí](https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844)
 <!--Link za verzije kursa koje nisu na sprskokm https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for -->
 
-```{learnmorenote} Per als mestres
+```{learnmorenote} Per als professors
 
-Enllaç a la lecció de Petlja en serbi https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844
-Enllaç per a versions del curs que no estan en serbi https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
+Enllaç a la lliçó de Petlja en serbi https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844
+Enllaç a versions del curs que no són en serbi https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
 ```
 
 ## Condicions
 
-A la majoria dels llenguatges de programació moderns, les sentències condicionals s'utilitzen per prendre decisions i controlar el flux d'un programa. Les més comunes inclouen:
+A la majoria dels llenguatges de programació moderns, les instruccions condicionals es fan servir per prendre decisions i controlar el flux del programa. Les construccions més habituals són:
 
 * if
 * if-else
 * switch-case
 
-És important notar que tot i que la sintaxi difereix entre llenguatges, la lògica central és la mateixa.
+Tot i que la sintaxi varia entre llenguatges, la lògica bàsica és la mateixa.
 
-### La sentència `if`
+### Instrucció `if`
 
-La sentència if executa un bloc de codi només si la condició especificada és veritat.
+L'instrucció `if` executa un bloc de codi només si la condició donada es compleix (és certa).
 
 ```text
 if condition then
     statement(s)
 ```
 
-Per exemple, en C, C++, C# i Java, si vols comprovar si `x` és major que `0`, la sentència condicional es pot escriure així:
+Per exemple, en C, C++, C# i Java, si vols comprovar si `x` és més gran que `0`, la instrucció condicional es pot escriure així:
 
 ```csharp
 int x = 5;
@@ -41,9 +41,9 @@ if (x > 0) {
 }
 ```
 
-### La sentència `if-else`
+### Instrucció `if-else`
 
-La sentència if-else executa un bloc de codi si la condició és veritat, i un altre bloc si és falsa.
+La instrucció `if-else` executa un bloc de codi si la condició es compleix i un altre bloc si no.
 
 ```text
 if condition then
@@ -52,7 +52,7 @@ else
     statement(s)
 ```
 
-Per exemple, en C, C++, C# i Java, si vols comprovar si `x` és major que `0` o no, la sentència condicional es pot escriure així:
+Per exemple, en C, C++, C# i Java, si vols comprovar si `x` és més gran que `0` o no, la instrucció condicional es pot escriure així:
 
 ```csharp
 int x = 5;
@@ -63,9 +63,9 @@ if (x > 0) {
 }
 ```
 
-### La sentència `switch-case`
+### Instrucció `switch-case`
 
-La sentència `switch-case` és útil quan es compara la mateixa variable amb molts valors possibles. Pot ser més llegible que usar múltiples sentències `if-else`.
+L'instrucció `switch-case` és útil quan una mateixa variable es compara amb diverses possibles valors. Aquesta construcció pot ser més clara que diverses instruccions `if-else`.
 
 ```text
 switch expression do
@@ -78,7 +78,7 @@ switch expression do
         statement(s)
 ```
 
-Per exemple, en C, C++, C# i Java, si vols determinar el nom del dia basant-se en el seu número ordinal en la setmana, la sentència condicional es pot escriure així:
+Per exemple, en C, C++, C# i Java, si vols determinar el nom del dia a partir del seu número de dia de la setmana, la instrucció condicional es pot escriure així:
 
 ```csharp
 int day = 3;
@@ -102,29 +102,29 @@ switch (day) {
 
 ### Anidament de condicions
 
-Les sentències condicionals poden col·locar-se dins d'altres sentències condicionals; a això se li diu **anidament**. Les condicions anidades són útils quan una decisió depèn del resultat d'una decisió anterior. Per exemple, primer pots comprovar si un usuari ha iniciat sessió i, dins d'aquest bloc, comprovar si té permís per realitzar una determinada acció.
+Les instruccions condicionals poden estar col·locades una dins de l'altra: això s'anomena **anidament**. Les condicions anidades són útils quan la decisió depèn del resultat d'una decisió anterior. Per exemple, potser primer comproves si l'usuari està connectat i, després, dins d'aquest bloc, comproves si té permís per executar una determinada acció.
 
 ## Bucles
 
-A la majoria dels llenguatges de programació moderns, els bucles s'implementen habitualment usant una de les següents construccions:
+A la majoria dels llenguatges de programació moderns, els bucles es duen a terme normalment mitjançant alguna d'aquestes construccions:
 
 * `for`,
 * `while` (o `while-do`),
 * `do-while` (o `repeat-until`),
 * `foreach` (o `for-each`).
 
-És important notar que tot i que la sintaxi difereix entre llenguatges, la lògica central és la mateixa.
+Tot i que la sintaxi varia entre llenguatges, la lògica bàsica és la mateixa.
 
-### El bucle `for`
+### Bucle `for`
 
-El bucle `for` s'utilitza quan el nombre d'iteracions és finit i predeterminat.
+La instrucció `for` es fa servir quan el nombre de repeticions és finit i conegut per endavant.
 
 ```text
 for variable ← start to end do
     statement(s)
 ```
 
-Per exemple, en C, C++, C# i Java, un bucle `for` per iterar nombres del 0 al 9 es pot escriure així:
+Per exemple, en C, C++, C# i Java, un bucle `for` per recórrer els nombres de 0 a 9 es pot escriure així:
 
 ```csharp
 for (int i = 0; i <= 9; i++) {
@@ -132,16 +132,16 @@ for (int i = 0; i <= 9; i++) {
 }
 ```
 
-### El bucle `while`
+### Bucle `while`
 
-El bucle `while` (o `while-do`) s'utilitza quan el nombre d'iteracions no es coneix de antuvi. La condició es verifica abans de cada iteració, per la qual cosa es coneix com **bucle amb precondició**.
+La instrucció `while` (o `while-do`) es fa servir quan el nombre de repeticions no es coneix per endavant. La condició es comprova abans de cada iteració, i per això aquest bucle s'anomena **bucle amb condició prèvia**.
 
 ```text
 while condition do
     statement(s)
 ```
 
-Per exemple, en C, C++, C# i Java, un bucle `while` per iterar nombres del 0 al 9 es pot escriure així:
+Per exemple, en C, C++, C# i Java, un bucle `while` per recórrer els nombres de 0 a 9 es pot escriure així:
 
 ```csharp
 int i = 0;
@@ -151,9 +151,9 @@ while (i <= 9) {
 }
 ```
 
-### El bucle `do-while`
+### Bucle `do-while`
 
-El bucle `do-while` (o `repeat-until`) també admet un nombre d'iteracions desconegut, però la condició es verifica després de cada iteració, per la qual cosa es coneix com **bucle amb postcondició**.
+La instrucció `do-while` (o `repeat-until`) també admet un nombre de repeticions desconegut, però la condició es comprova després de cada iteració. Aquest és un **bucle amb condició posterior** i sempre s'executa almenys una vegada.
 
 ```text
 repeat
@@ -161,7 +161,7 @@ repeat
 until condition
 ```
 
-Per exemple, en C, C++, C# i Java, un bucle `do-while` per iterar nombres del 0 al 9 es pot escriure així:
+Per exemple, en C, C++, C# i Java, un bucle `do-while` per recórrer els nombres de 0 a 9 es pot escriure així:
 
 ```csharp
 int i = 0;
@@ -171,16 +171,16 @@ do {
 } while (i <= 9);
 ```
 
-### El bucle `foreach`
+### Bucle `foreach`
 
-El bucle `foreach` (o `for-each`) s'utilitza per iterar a través de tots els elements en una col·lecció o matriu. Aquest tipus de bucle simplifica el codi i redueix la probabilitat d'errors.
+La instrucció `foreach` (o `for-each`) es fa servir per recórrer tots els elements d'una col·lecció o d'un array. Aquest bucle simplifica la iteració quan no et preocupa l'índex.
 
 ```text
 for-each element in collection do
     statement(s)
 ```
 
-Per exemple, un bucle `for-each` per iterar a través d'una matriu `nums` es pot escriure en C++ com:
+Per exemple, un bucle `for-each` per recórrer un array `nums` es pot escriure en C++ així:
 
 ```cpp
 int nums[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -189,26 +189,27 @@ for (int i : nums) {
 }
 ```
 
-...o en C# així:
+...o en C# així...
 
 ```csharp
 int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 foreach (int i in nums) {
     // ...
-}  
+}
 ```
 
-...o en Java:
+...o en Java així:
 
 ```java
 int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 for (int i : nums) {
     // ...
-}   
+}
 ```
 
 ### Anidament de bucles
 
-Els bucles també poden estar anidats, la qual cosa significa que un bucle està dins d'un altre. Això és comú quan es treballa amb matrius multidimensionals o quan es necessita realitzar comparacions entre elements.
+Els bucles també poden estar anidats, és a dir, un bucle pot estar dins d'un altre. Això passa sovint quan es treballa amb dades multidimensionals, com recórrer files i columnes d'una matriu o iterar sobre una graella en un joc. A més, els bucles i les condicions es poden combinar lliurement: per exemple, un bucle pot contenir una instrucció `if` per processar només alguns elements, o una instrucció `if` pot contenir un bucle per repetir accions quan es compleix la condició. Aquesta possibilitat de combinar i anidar bucles i condicions permet crear algorismes complexos mantenint la lògica clara.
 
-Els diferents tipus de bucles seran necessaris per a diferents formes de xifratge que aprendràs a les següents pàgines.
+
+Diversos tipus de bucles seran necessaris per als diferents tipus de xifratge que aprendràs en les properes pàgines!
