@@ -1,71 +1,72 @@
-# Introduction to the History of Cryptography and the Importance of Cryptography in the Modern World
+# Introducció a la història de la criptografia i la importància de la criptografia al món contemporani
 
-Since ancient times, when people began to write, there has been a need to hide certain written text, i.e., to encrypt it so that only authorized persons could read it. Cryptography has always played an important role throughout history. Let's look at a brief history of cryptography.
+Ja des de l'antiguitat, quan la gent va començar a escriure, hi havia la necessitat d'ocultar o protegir cert text escrit. Amb el desenvolupament de tècniques per ocultar la informació registrada, va aparèixer una nova disciplina científica: la criptografia.
 
-> **Cryptography** is a scientific discipline that deals with the development of systems for encrypting information. The word "cryptography" comes from the Greek words "kryptos" (hidden, secret) and "graphia" (writing), so it literally means "secret writing."
+> **La criptografia** és una disciplina científica que es dedica al desenvolupament de sistemes per xifrar la informació. La paraula criptografia prové de les paraules gregues κρυπτός (*ocult, secret*) i γράφειν (*escriure*).
 
-The first book on cryptography, entitled "Book of Cryptic Messages," was written, according to historical sources, by a Moroccan scientist Al-Kindi in the 9th century. He introduced the concept of frequency analysis of letters in a message.
+El primer llibre sobre criptografia, amb el títol “El llibre dels missatges xifrats”, segons les fonts històriques, el va escriure el filòsof àrab Al-Khalil (717–786), on per primera vegada es fan servir permutacions i combinacions per enumerar totes les paraules àrabs amb i sense vocals. No obstant això, els mètodes clàssics de xifratge sovint revelen patrons estadístics del missatge original, cosa que es pot aprofitar per trencar el xifratge.
 
-> **Cryptanalysis** is a scientific discipline that studies methods for "breaking" cryptographic systems. The word comes from the Greek words "kryptos" (hidden, secret) and "analysis" (to break apart, to analyze).
+Després del descobriment de l'anàlisi de freqüències de les lletres d'un missatge, l'especialista àrab Al-Kindi va escriure al segle IX el llibre “Manuscrit per desxifrar missatges xifrats”, on es descriu per primera vegada l'ús de tècniques d'anàlisi de freqüències.
 
-The first known treatise on cryptography was written on 25 pages by Italian architect Leon Battista Alberti in 1468. He presented a cipher that used multiple substitution alphabets to encrypt a single message.
+> **La criptoanàlisi** és una disciplina científica que estudia els mètodes per “trencar” els sistemes criptogràfics. La paraula criptoanàlisi prové de les paraules gregues κρυπτός (*ocult, secret*) i αναλύειν (*analitzar*).
 
-![French cipher machine in the form of a book from the 16th century](./images/cyphermachine.jpg)
+El primer tractat conegut sobre criptografia el va escriure el 1467 l'arquitecte italià Leone Battista Alberti. Ell és també el creador del cercle de xifratge i d'altres solucions per ocultar textos en dos nivells. Al segle XVI van fer contribucions importants el metge milanès Girolamo Cardano, el matemàtic Battista Porta i el diplomàtic francès Blaise de Vigenère.
 
-In the 19th century, it was concluded that cryptography should not rely on the secrecy of encryption algorithms, but on the secrecy of the key used for encryption (Kerckhoffs's principle).
+![Màquina de xifratge francesa en forma de llibre del segle XVI](./images/cyphermachine.jpg)
 
-During World War II, the Germans created a machine called the **Enigma** that encrypted messages in a previously unprecedented way. The Enigma machine was considered unbreakable, but British cryptanalysts, led by Alan Turing, successfully broke it, which had a significant impact on the course of the war.
+Al segle XIX es va concloure que la criptografia no s'ha de basar en la secretivitat dels algorismes de xifratge, sinó en la secretivitat de les claus. La secretivitat de la mateixa clau ha de ser suficient per impedir que es trenqui el missatge xifrat. Això es va convertir en un dels principis bàsics de la criptografia, registrat el 1883 per Auguste Kerckhoffs (principi de Kerckhoffs). Encara amb més claredat, ho va repetir Claude Shannon, fundador de la teoria de la informació i figura clau de la criptografia teòrica, amb la màxima de Shannon: “l'enemic coneix el sistema”.
+
+Durant la Segona Guerra Mundial, els alemanys van crear una màquina anomenada **Enigma**, que xifrada missatges d'una manera fins aleshores inèdita. No obstant això, per molt revolucionària que fos en aquell moment, els aliats, liderats per Alan Turing, van aconseguir trencar el sistema criptogràfic Enigma mitjançant la criptoanàlisi.
 
 ![Enigma](./images/enigma.jpg)
 
-## Present
+## Actualitat
 
-After World War II, with the development of information technology, cryptology, as the science of protecting information and the entire field of communication security, became increasingly important.
+Després de la Segona Guerra Mundial, amb el desenvolupament de les tecnologies de la informació, la criptologia, com a ciència de la protecció de la informació, i les seves subdisciplines científiques, es fan cada cop més importants. Els ordinadors moderns poden trencar xifratges senzills amb una velocitat increïble, per la qual cosa els algorismes criptogràfics s'han tornat molt més avançats.
 
-Today, in cryptography we talk about **symmetric** encryption, where the same key is used for both encryption and decryption. The key must be kept secret and shared securely between parties.
+Avui dia, a la criptografia es parla de **xifratge simètric**, on la mateixa clau s'utilitza tant per xifrar com per desxifrar. El xifratge simètric és més ràpid i més adequat per a grans volums de dades. S'utilitza quan cal protegir les dades ràpidament; per exemple, xifratge de fitxers a l'ordinador, xifratge de la comunicació durant una videotrucada o protecció de dades en un disc o un dispositiu USB.
 
-![Symmetric encryption](./images/symmetric.png)
+![Xifratge simètric](./images/symmetric.png)
 
-On the other hand, when it's important to securely exchange keys, prove who sent the message, or sign documents, we use **asymmetric** encryption (also called public-key cryptography). In this case, each party has a public key (which can be shared with anyone) and a private key (which must be kept secret).
+D'altra banda, quan és important intercanviar claus de manera segura, demostrar qui ha enviat un missatge o signar un document amb signatura digital, utilitzem el **xifratge asimètric**, on es fa servir un parell de claus pública i privada:
 
-![Asymmetric encryption](./images/asymmetric.png)
+![Xifratge asimètric](./images/asymmetric.png)
 
-Another important tool is the cryptographic hash function, which creates a unique digital fingerprint of data and is widely used in password protection and digital signatures.
+Una altra eina important és la funció hash criptogràfica, que crea una empremta digital única de les dades i s'utilitza àmpliament en la protecció de contrasenyes, les signatures digitals i la tecnologia blockchain.
 
-## Future
+## Futur
 
-Looking ahead, quantum cryptography is expected to become the foundation of secure communication. It is based on quantum mechanics principles and promises unconditional security.
+Mirant cap endavant, s'espera que la criptografia quàntica esdevingui la base de la comunicació segura. Es basa en el principi d'incertesa d'Heisenberg de la física quàntica. No obstant això, el còmput quàntic també suposa una amenaça per a molts algorismes criptogràfics que s'utilitzen actualment, cosa que ha portat al desenvolupament de la criptografia postquàntica.
 
 ![Google Quantum AI](./images/google.jpg)
 
-The importance of cryptology in modern society is immeasurable. Cryptographic systems provide privacy for electronic communications, protection from identity theft, secure online transactions, and preservation of national security. Without cryptography, modern digital society simply could not function.
+La importància de la criptologia a la societat contemporània és incalculable. Els sistemes criptogràfics garanteixen la privacitat de la comunicació electrònica, permeten el comerç electrònic segur, protegeixen les criptomonedes i, en alguns països, fins i tot garanteixen el vot electrònic i el recompte de vots. No obstant això, també s'obren nombrosos dilemes ètics. Per respondre'ls, prepara't per a un debat!
 
-## Debate
+## Debat
 
-**Debate topic: Should the right to privacy be more important than society's security?**
+**Tema del debat: Ha de ser més important el dret a la privacitat que la seguretat de la societat?**
 
-Role division
+Distribució de rols
 
-Team A – For strong privacy protection
+Equip A – A favor d'una forta protecció de la privacitat
 
-Every person has the right to private communication.
-Encryption protects citizens from abuse, identity theft, and surveillance.
-No one, not even the state, should have access to private messages.
+Cada persona té dret a la comunicació privada.
+El xifratge protegeix els ciutadans de l'ús indegut, el robatori d'identitat i la vigilància.
+Ningú, ni tan sols l'estat, no hauria de tenir accés als missatges privats.
 
-Team B – For greater control for security
+Equip B – A favor d'un major control per a la seguretat
 
-Complete encryption can help criminals and terrorists hide their activities.
-Security services sometimes need access to communication to protect citizens.
-Society must find a balance between privacy and security.
+El xifratge total pot ajudar criminals i terroristes a ocultar les seves activitats.
+Els serveis de seguretat de vegades han de tenir accés a la comunicació per protegir els ciutadans.
+La societat ha de trobar un equilibri entre privacitat i seguretat.
 
-You can conduct consideration of arguments in groups between two classes or during the class, followed by exchange of stances and experiences. You can also consider additional questions:
+La discussió dels arguments es pot fer en grups d'entre dues hores o durant la mateixa classe, i després hi ha un intercanvi d'opinions (cada grup té 5 minuts per justificar la seva postura). La resta d'estudiants, el jurat, fan preguntes i els dos grups tenen 10 minuts per respondre.
 
-Assessment and determining the winning group is not necessary, but a joint discussion of all stated arguments is desirable.
+L'avaluació i la determinació del grup guanyador no és necessària, però sí és recomanable una discussió conjunta sobre tots els arguments exposats. Algunes preguntes addicionals per a la discussió poden ser:
 
-Additional questions to consider:
-Should the police have the right to access encrypted messages of suspects?
-Would you agree to have your messages analyzed if it could prevent a terrorist attack?
-What are the risks if someone has access to all our data?
-Are social networks transparent enough about the data they collect?
-Are young people aware of how much personal information they leave on the internet?
-Is a password enough to protect an account or are additional security measures needed?
+- Ha de tenir dret la policia a accedir als missatges xifrats dels sospitosos?
+- Acceptaries que s'analitzin els teus missatges si això evités un atac terrorista?
+- Quins són els riscos si algú té accés a totes les nostres dades?
+- Les xarxes socials són prou transparents pel que fa a les dades que recopilen?
+- Els joves són conscients de quantes dades personals deixen a Internet?
+- La contrasenya és suficient per protegir un compte o calen mesures de seguretat addicionals?

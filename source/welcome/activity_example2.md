@@ -1,6 +1,6 @@
-# Example Lecture 2
+# Lliçó d'exemple 2
 
-This is another example lecture in English.
+Aquesta és una altra lliçó d'exemple en català.
 
-Use this space to add more sample content, explanations, or exercises for your course.
+Utilitzeu aquest espai per afegir més contingut de mostra, explicacions o exercicis per al vostre curs.
 

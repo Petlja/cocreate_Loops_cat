@@ -1,7 +1,7 @@
 ---
 status: exclude
 ---
-# Detailed
+# Detallat
 
 ```{toctree}
 :maxdepth: 2

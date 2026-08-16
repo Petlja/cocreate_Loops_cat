@@ -1,26 +1,28 @@
-﻿---
+---
 status: exclude
-alias: Loops_and_Cryptography
+alias: Loops_and_Cryptography_cat
 lang: en
-short_description: Introduction to Cryptography with Loops
+short_description: Introducció a la criptografia amb bucles
 long_description: >
-    <p>In this course, you will learn to apply loops on characters and strings to implement basic cryptographic algorithms.</p>
+    <p>En aquest curs aprendràs a utilitzar bucles sobre caràcters i cadenes per implementar algoritmes criptogràfics bàsics i entendre per què la criptografia és important en el món actual.</p>
+    
+    <p>Aquest curs s'ha creat en el marc del projecte Erasmus+ <a rel="license" href="https://erasmus-cocreate.petlja.org">CoCreate - Computer-Supported Collaborative Learning for Inclusive Education</a>.</p>
     <p>
     <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">
     <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-    <br>This course was published by Petlja Foundation under the <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.
+    <br>Aquest curs va ser publicat per la Fundació Petlja sota la <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.sr_LATN">Llicència Internacional Creative Commons Reconeixement 4.0 (CC BY 4.0)</a>.
     </p>
 
 will_learn:
-    - Conditions and Loops Fundamentals
-    - Characters and Strings Fundamentals
-    - Introduction to Cryptography
-    - Caesar Cipher
-    - Skytale
-    - XOR
+    - Condicions i bucles (repàs)
+    - Introducció a la criptografia: història i importància actual
+    - Xifratge Cèsar
+    - Escítala
+    - Xifratge XOR
 
 needed: 
-    - A basic personal computer system with Internet access. Optionally, a computer system with specific programming language IDE.
+    - Un ordinador personal bàsic amb accés a Internet. Opcionalment, un ordinador amb un entorn de desenvolupament instal·lat per a un llenguatge de programació concret.
+    - Tres hores escolars
 
 useful:
     - Microsoft C++, C, and Assembler documentation: https://learn.microsoft.com/en-us/cpp/
@@ -29,20 +31,19 @@ useful:
     - Python language documentation: https://docs.python.org/3/
 ---
 
-# Loops and Cryptography
+# Bucles i criptografia
 
-You are about to start an introductory lesson about loops on characters and strings
-to implement basic cryptographic algorithms.
+Estàs a punt de començar una lliçó introductòria sobre bucles aplicats a caràcters i cadenes per implementar algoritmes criptogràfics bàsics i entendre per què la criptografia és rellevant en el món actual.
 
-Course author: Petlja Foundation
+Autor del curs: Fundació Petlja
 
-This course is published by Petlja Foundation under the
-[Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
+Aquest curs és publicat per la Fundació Petlja sota la [Llicència Internacional Creative Commons Reconeixement 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.sr_LATN).
 
 ```{toctree}
 :maxdepth: 2
-:caption: Contents
+:caption: Contingut
 :hidden:
 
 intro/index
 lesson/index
+```

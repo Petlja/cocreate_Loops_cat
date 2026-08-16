@@ -1,12 +1,12 @@
-# Good collaboration rules
+# Regles per a una bona col·laboració
 
-When working in pairs or groups as expected in this lesson, pay attention to the following rules:
+En aquesta lliçó treballaràs en parella o en petits grups mentre resols tasques de criptografia, compares idees i expliques solucions. Perquè aquest treball compartit sigui útil i agradable per a tothom, tingues presents aquestes regles bàsiques:
 
-1. We are all equally valuable members of the group and share responsibilities equally.
-2. We foster a good atmosphere even when we think differently.
-3. We help everyone contribute to group work.
-4. We strive to involve everyone in decision-making.
-5. The more ideas we consider, the more certain we are that we have selected the best one.
-6. We expound every idea, weigh arguments, and devise solutions.
-7. We wisely use our time to work on the task.
-8. We monitor our progress and contemplate our next step.
+1. Totes les persones del grup són igualment valuoses i comparteixen les responsabilitats de manera equilibrada.
+2. Manteniu un ambient respectuós i constructiu, fins i tot quan no esteu d'acord.
+3. Ajudeu-vos mútuament perquè tothom pugui contribuir al treball.
+4. Incloeu totes les persones en la presa de decisions.
+5. Com més idees analitzeu, més fàcil serà trobar una bona solució.
+6. Expliqueu les vostres propostes, contrasteu arguments i reviseu junts les solucions.
+7. Utilitzeu el temps de manera responsable i centreu-vos en la tasca.
+8. Reviseu regularment el progrés del grup i decidiu quin ha de ser el pas següent.

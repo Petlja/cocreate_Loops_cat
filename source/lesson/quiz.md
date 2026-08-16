@@ -1,50 +1,52 @@
-# Independent Knowledge Check
+# Autoevaluació i activitat de grup
 
 ```{mchoice}
 :answer1: for
 :answer2: foreach
 :answer3: while
-:answer4: None of the above
+:answer4: Cap de les anteriors
 :correct: 3
 
-Which loop is most suitable when we do not know in advance how many times the procedure will be repeated?
+Quin tipus de bucle és més adequat quan no sabem d'antuvi quantes vegades es repetirà un procediment?
 ```
 
 ```{mchoice}
-:answer1: Each letter is replaced by the previous and next letter, and one of them is chosen randomly
-:answer2: Each letter is replaced by a letter shifted by a fixed number of positions in the alphabet
-:answer3: Letters are grouped into pairs and then swapped within each pair
-:answer4: All vowels are removed, and the remaining letters are moved to the end of the text
+:answer1: Cada lletra es canvia amb la lletra anterior i la següent, i se'n tria una a l'atzar
+:answer2: Cada lletra es canvia per una lletra desplaçada un nombre fix de posicions en l'alfabet
+:answer3: Les lletres es agrupen en parelles i es canvien les posicions dins de cada parella
+:answer4: Totes les vocals s'esborren i les lletres restants es mouen al final del text
 :correct: 2
 
-Caesar cipher works by:
+Com funciona la xifratura de Cèsar?
 ```
 
 ```{mchoice}
-:answer1: Uses a different key for encryption and decryption
-:answer2: Works only with text, not numbers
-:answer3: The same procedure is used for both encryption and decryption
-:answer4: Can be used only once
+:answer1: Utilitza una clau diferent per a xifratge i desxifratge
+:answer2: Només funciona amb text, no amb nombres
+:answer3: El mateix procediment s'utilitza tant per a xifratge com per a desxifratge
+:answer4: Només es pot utilitzar una vegada
 :correct: 3
 
-XOR encryption is special because:
+Qu'és especial del xifratge XOR?
 ```
 
-Now for the group task! Set aside at least 30 minutes for this activity!
+I ara una activitat de grup! Dediqueu almenys 30 minuts a aquesta activitat!
 
-## Cryptolab
+## Criptografia Laboratori
 
-### Step 1 – Encryption
-Students are divided into pairs. Each pair draws one method:
-• Caesar (e.g. shift +3)
-• Scytale (e.g. 3 rows)
-• XOR (simple key, e.g. 5)
-The task is for students, working collaboratively in pairs, to encrypt a sentence or sentences assigned by the teacher (e.g. Knowledge is power or Programming is fun).
+### Pas 1 – Xifratge
+Els estudiants es divideixen en parelles. Cada parella extreu un mètode:
+- Cèsar (per exemple, desplaçament +3)
+- Escítala (per exemple, 3 files)
+- XOR (clau senzilla, per exemple, `clau`)
 
-### Step 2 – Mixing
-• All encrypted messages are placed in an “envelope” (or a digital file).
-• Pairs draw one message they did not create.
+La tasca és xifrar, treballant en parella, una paraula o una frase que indiqui el professorat (per exemple, *El coneixement és poder* o *Programar és divertit*).
 
-### Step 3 – Decryption (without knowing the method)
-Now each pair has the task of decrypting the drawn message while not knowing which encryption method was used. First, they need to determine which method was used, then decrypt the message, and then explain how they arrived at the solution.
-It is important to limit the time for this activity and explain to students that it is okay if they do not manage to decrypt everything. The teacher or a peer is there to clarify the examples that the pairs struggled with and could not solve.
+### Pas 2 – Barreja
+- Tots els missatges xifrats es col·loquen en una "sobreta" (o arxiu digital).
+- Les parelles extrauen un missatge que no van crear.
+
+### Pas 3 – Desxifratge (sense saber el mètode)
+Ara la parella ha de desxifrar el missatge extret sense saber quin mètode de xifratge s'ha utilitzat. Per tant, primer han de determinar quin mètode s'ha utilitzat, després han de desxifrar el missatge, i finalment han d'explicar com van arribar a la solució.
+
+Per a aquesta activitat és important limitar el temps i explicar als estudiants que està bé si no aconsegueixen desxifrar. El professorat o un company és allà per aclarir aquests exemples on les parelles van tenir dificultats i no van poder resoldre.

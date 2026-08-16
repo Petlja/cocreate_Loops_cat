@@ -1,7 +1,7 @@
-﻿# About the Course
+﻿# Sobre el curs
 
-Welcome to the demo course!
+Benvinguts al curs de demostració!
 
-This is a sample "About the Course" lecture. Here you can provide a brief overview of the course, its objectives, and what students can expect to learn.
+Aquesta és una lliçó de mostra "Sobre el curs". Aquí podeu proporcionar una breu descripció general del curs, els seus objectius i el que els estudiants poden esperar aprendre.
 
-Feel free to customize this section with more details about the course structure, prerequisites, and any other important information for your learners.
+No dubteu a personalitzar aquesta secció amb més detalls sobre l'estructura del curs, els prerequisits i qualsevol altra informació important per als vostres estudiants.

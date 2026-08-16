@@ -1,5 +1,5 @@
-# Example
+# Exemple
 
-This is a sample lecture in the Details (also you can rename this) section.
+Aquesta és una lliçó de mostra a la secció Detalls (també podeu reanomenar-la).
 
-You can use this file to add more in-depth explanations, examples, or exercises for your course.
+Podeu utilitzar aquest fitxer per afegir explicacions més detallades, exemples o exercicis per al vostre curs.

@@ -1,16 +1,17 @@
 # Skytale
 
-The Skytale (skytale) is one of the oldest known tools for encryption, dating back to ancient Greece around 400 BC. It was a simple cylindrical device used by the Spartans to send secret messages during military campaigns.
+Skytale (angl. skytale) és una de les eines de xifratge més antigues que es coneixen, i prové de l'antiga Grècia cap al 400 aC. Era un dispositiu cilíndric senzill que els espartans utilitzaven per enviar missatges secrets durant les campanyes militars.
 
-A strip of parchment or leather was wrapped around a wooden rod (*skytale*) of a certain diameter. The message was then written lengthwise across the wrapped strip. To decrypt, the receiver wrapped the strip around a rod of the same diameter and read the message vertically.
+Una cinta de pergamí o pell es enrotllava al voltant d'un petit bastó de fusta (*skytale*) d'un diàmetre determinat. El missatge es escrivia al llarg del bastó. Quan la cinta es desenrotllava, les lletres semblaven barrejades i sense sentit. El receptor havia de tenir un bastó amb el **mateix diàmetre** per poder enrotllar la cinta i llegir el missatge original.
 
-If you want to encrypt the message:
+Si vols xifrar un missatge:
 
 ```text
 attackatdawn
 ```
 
-and you choose a rod that allows **4 letters per wrap**, you first write the message vertically in columns, forming a table:
+
+i triïs un bastó que permet **4 lletres per volta**, primer escrius el missatge verticalment en columnes, formant files de longitud 4:
 
 ```text
 a t t a
@@ -18,31 +19,37 @@ c k a t
 d a w n
 ```
 
-The encrypted text is then obtained by reading row by row:
+
+El text xifrat es genera llegint per files:
 
 ```text
 acdtkatawatn
 ```
 
-To decrypt the message, the receiver wraps the strip around a rod of the same diameter and reads vertically again to reconstruct the original message.
 
-## First assignment
+Per desxifrar el missatge, el receptor enrotlla de nou la cinta al voltant del bastó del mateix diàmetre i llegeix verticalment per reconstruir el missatge original.
 
-Create a console application in any programming language to encrypt and decrypt messages using the Skytale cipher.
 
-The allowed alphabet for messages contains only lowercase letters of the English alphabet:
+## Primer exercici
+
+Crea una aplicació de consola en qualsevol llenguatge de programació que xifri i desxifri missatges utilitzant el xifratge Skytale. Utilitza l'entorn de desenvolupament que feu servir a les classes de programació.
+
+L'alfabet permès per als missatges conté només lletres minúscules de l'alfabet anglès:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
-Spaces, uppercase letters, numbers, and other characters are not allowed!
 
-In the first line of input there is a message `m` of at most one hundred characters. In the second line there is an integer `k` (the number of columns in the table for encryption). In the third line there is an integer `s` (1 for encryption, 2 for decryption).
+No es permeten espais, majúscules, nombres ni altres caràcters!
 
-### Test Example 1
 
-If the input is:
+A la primera línia de l'entrada hi ha un missatge `m` de longitud com a molt cent caràcters. A la segona línia hi ha un nombre enter `k` (nombre de columnes: circumferència del bastó). A la tercera línia hi ha un nombre enter `s` que representa l'operació. Si $s=1$, llavors s'ha de xifrar `m`. Si $s=2$, llavors s'ha de desxifrar `m`.
+
+
+### Exemple de prova 1
+
+Si l'entrada és:
 
 ```text
 attackatdawn
@@ -50,15 +57,17 @@ attackatdawn
 1
 ```
 
-the output should be:
+
+la sortida ha de ser:
 
 ```text
 acdtkatawatn
 ```
 
-### Test Example 2
 
-If the input is:
+### Exemple de prova 2
+
+Si l'entrada és:
 
 ```text
 acdtkatawatn
@@ -66,36 +75,37 @@ acdtkatawatn
 2
 ```
 
-the output should be:
+
+la sortida ha de ser:
 
 ```text
 attackatdawn
 ```
 
-## Solution hints
+## Consells per resoldre-ho
 
-For **encryption**, write the plaintext vertically in a table with `k` columns. Read the table row by row to get the ciphertext.
+Per a **xifrar**, escriu el text obert verticalment en una taula amb `k` columnes. Llegeix la taula per files per obtenir el text xifrat. Per a **desxifrar**, escriu el text xifrat per files en una taula amb `k` columnes i després llegeix la taula verticalment per reconstruir el text obert.
 
-For **decryption**, write the ciphertext row by row into a table with `k` columns, read the table vertically to reconstruct plaintext.
 
-## More complex Skytale Assignments (optional)
+## Exercicis més avançats amb el xifratge Skytale (opcional)
 
-### Expand the allowed alphabet
+### Amplia l'alfabet permès
 
-Include uppercase letters, spaces, numbers, and punctuation marks.
+Inclou majúscules, espais, nombres i signes de puntuació.
 
-### Use functions
+### Fes servir funcions
 
-Create `encrypt()` and `decrypt()` functions to make the code modular.
+Crea funcions `encrypt()` i `decrypt()` perquè el codi sigui modular.
 
-### Create a class
+### Crea una classe
 
-Implement a `SkytaleCipher` class that stores `k` and provides methods for encryption and decryption.
+Implementa la classe `SkytaleCipher` que emmagatzemi `k` i ofereixi mètodes per xifrar i desxifrar.
 
-### Encrypt and decrypt files
+### Xifra i desxifra fitxers
 
-Modify the program so that it reads plaintext or ciphertext from a file and writes the result to another file.
+Modifica el programa perquè llegeixi el text obert o xifrat d'un fitxer i escrigui el resultat a un altre fitxer.
 
-### Handle incomplete rows
+### Tracta files incompletes
 
-Modify the program so that if the last row is shorter than `k`, it still encrypts and decrypts correctly, handling incomplete rows appropriately.
+Modifica el programa perquè, si l'última fila és més curta que `k`, encara xifiqui i desxifri correctament, tractant els caràcters que faltin o afegint ompliment.
+
