@@ -1,17 +1,16 @@
-# Skytale
+# Escítala
 
-Skytale (angl. skytale) és una de les eines de xifratge més antigues que es coneixen, i prové de l'antiga Grècia cap al 400 aC. Era un dispositiu cilíndric senzill que els espartans utilitzaven per enviar missatges secrets durant les campanyes militars.
+L’escítala (skytale) és una de les eines de xifratge més antigues conegudes; procedeix de l’antiga Grècia, cap al 400 aC. Era un senzill dispositiu cilíndric que els espartans feien servir per enviar missatges secrets durant les campanyes militars.
 
-Una cinta de pergamí o pell es enrotllava al voltant d'un petit bastó de fusta (*skytale*) d'un diàmetre determinat. El missatge es escrivia al llarg del bastó. Quan la cinta es desenrotllava, les lletres semblaven barrejades i sense sentit. El receptor havia de tenir un bastó amb el **mateix diàmetre** per poder enrotllar la cinta i llegir el missatge original.
+Una tira de pergamí o de cuir s’enrotllava al voltant d’una vara de fusta (*escítala*) amb un determinat diàmetre. Després, el missatge s’escrivia al llarg de la tira enrotllada. Per desxifrar-lo, el receptor enrotllava la tira al voltant d’una vara del mateix diàmetre i llegia el missatge al llarg, de la mateixa manera com havia estat escrit.
 
-Si vols xifrar un missatge:
+Si voleu xifrar el missatge:
 
 ```text
 attackatdawn
 ```
 
-
-i triïs un bastó que permet **4 lletres per volta**, primer escrius el missatge verticalment en columnes, formant files de longitud 4:
+i escolliu una vara que permeti **3 lletres per volta**, la tira hi fa quatre voltes. Escriviu el missatge al llarg de la vara, fila per fila, amb 4 lletres per fila (una a cada volta), i formeu una taula:
 
 ```text
 a t t a
@@ -19,37 +18,31 @@ c k a t
 d a w n
 ```
 
-
-El text xifrat es genera llegint per files:
+A continuació, el text xifrat s’obté llegint columna per columna (és l’ordre de les lletres a la tira desenrotllada):
 
 ```text
 acdtkatawatn
 ```
 
+Per desxifrar el missatge, el receptor enrotlla la tira al voltant d’una vara del mateix diàmetre i torna a llegir fila per fila per reconstruir el missatge original.
 
-Per desxifrar el missatge, el receptor enrotlla de nou la cinta al voltant del bastó del mateix diàmetre i llegeix verticalment per reconstruir el missatge original.
+## Primera tasca
 
+Creeu una aplicació de consola en qualsevol llenguatge de programació que xifri i desxifri missatges mitjançant la xifra de l’escítala.
 
-## Primer exercici
-
-Crea una aplicació de consola en qualsevol llenguatge de programació que xifri i desxifri missatges utilitzant el xifratge Skytale. Utilitza l'entorn de desenvolupament que feu servir a les classes de programació.
-
-L'alfabet permès per als missatges conté només lletres minúscules de l'alfabet anglès:
+L’alfabet permès per als missatges només conté les lletres minúscules de l’alfabet anglès:
 
 ```text
 Σ = { a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z }
 ```
 
+No es permeten espais, lletres majúscules, números ni altres caràcters!
 
-No es permeten espais, majúscules, nombres ni altres caràcters!
-
-
-A la primera línia de l'entrada hi ha un missatge `m` de longitud com a molt cent caràcters. A la segona línia hi ha un nombre enter `k` (nombre de columnes: circumferència del bastó). A la tercera línia hi ha un nombre enter `s` que representa l'operació. Si $s=1$, llavors s'ha de xifrar `m`. Si $s=2$, llavors s'ha de desxifrar `m`.
-
+A la primera línia d’entrada hi ha un missatge `m` de com a màxim cent caràcters. A la segona línia hi ha un enter `k` (el nombre de columnes de la taula per al xifratge). A la tercera línia hi ha un enter `s` (1 per xifrar, 2 per desxifrar).
 
 ### Exemple de prova 1
 
-Si l'entrada és:
+Si l’entrada és:
 
 ```text
 attackatdawn
@@ -57,17 +50,15 @@ attackatdawn
 1
 ```
 
-
-la sortida ha de ser:
+la sortida hauria de ser:
 
 ```text
 acdtkatawatn
 ```
 
-
 ### Exemple de prova 2
 
-Si l'entrada és:
+Si l’entrada és:
 
 ```text
 acdtkatawatn
@@ -75,37 +66,36 @@ acdtkatawatn
 2
 ```
 
-
-la sortida ha de ser:
+la sortida hauria de ser:
 
 ```text
 attackatdawn
 ```
 
-## Consells per resoldre-ho
+## Pistes per a la solució
 
-Per a **xifrar**, escriu el text obert verticalment en una taula amb `k` columnes. Llegeix la taula per files per obtenir el text xifrat. Per a **desxifrar**, escriu el text xifrat per files en una taula amb `k` columnes i després llegeix la taula verticalment per reconstruir el text obert.
+Per al **xifratge**, escriviu el text original fila per fila en una taula amb `k` columnes. Llegiu la taula columna per columna per obtenir el text xifrat.
 
+Per a la **desxifra**, escriviu el text xifrat columna per columna en una taula amb `k` columnes (cada columna conté la longitud del missatge dividida entre `k` lletres) i, després, llegiu la taula fila per fila per reconstruir el text original.
 
-## Exercicis més avançats amb el xifratge Skytale (opcional)
+## Tasques més complexes amb l’escítala (opcional)
 
-### Amplia l'alfabet permès
+### Amplieu l’alfabet permès
 
-Inclou majúscules, espais, nombres i signes de puntuació.
+Incloeu lletres majúscules, espais, números i signes de puntuació.
 
-### Fes servir funcions
+### Feu servir funcions
 
-Crea funcions `encrypt()` i `decrypt()` perquè el codi sigui modular.
+Creeu les funcions `encrypt()` i `decrypt()` per modularitzar el codi.
 
-### Crea una classe
+### Creeu una classe
 
-Implementa la classe `SkytaleCipher` que emmagatzemi `k` i ofereixi mètodes per xifrar i desxifrar.
+Implementeu una classe `SkytaleCipher` que emmagatzemi `k` i proporcioni mètodes de xifratge i desxifra.
 
-### Xifra i desxifra fitxers
+### Xifreu i desxifreu fitxers
 
-Modifica el programa perquè llegeixi el text obert o xifrat d'un fitxer i escrigui el resultat a un altre fitxer.
+Modifiqueu el programa perquè llegiu text original o text xifrat d’un fitxer i escriviu el resultat en un altre fitxer.
 
-### Tracta files incompletes
+### Gestioneu les files incompletes
 
-Modifica el programa perquè, si l'última fila és més curta que `k`, encara xifiqui i desxifri correctament, tractant els caràcters que faltin o afegint ompliment.
-
+Modifiqueu el programa perquè, si l’última fila té menys de `k` elements, encara pugui xifrar i desxifrar correctament, gestionant adequadament les files incompletes.
