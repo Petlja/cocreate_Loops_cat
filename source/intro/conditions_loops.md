@@ -2,16 +2,6 @@
 
 Per dominar amb èxit el material sobre xifratge, cal que coneguis els fets bàsics sobre el treball amb condicions i bucles. Les condicions i els bucles són els mecanismes principals que permeten als programes informàtics prendre decisions i repetir determinades accions. Gràcies a les condicions, un programa pot reaccionar de manera diferent segons les dades que rep, mentre que els bucles permeten repetir de manera eficient els mateixos passos diverses vegades. Aquests conceptes són de vital importància en xifratge, ja que els algorismes de protecció de dades es basen en una sèrie de regles, comprovacions i procediments repetitius que garanteixen la seguretat de la informació.
 
-Anem a recordar alguns fonaments! Si aquesta zona encara no et queda clara, passa per la lliçó de Petlja dedicada específicament als bucles.
-
-L'enllaç a la lliçó de Petlja sobre bucles és [aquí](https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844)
-<!--Link za verzije kursa koje nisu na sprskokm https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for -->
-
-```{learnmorenote} Per als professors
-
-Enllaç a la lliçó de Petlja en serbi https://www.petlja.org/sr-Latn-RS/kurs/477/12/5844
-Enllaç a versions del curs que no són en serbi https://petlja.org/en/biblioteka/r/lekcije/python-za-svakog/01_karel_eng_02_for
-```
 
 ## Condicions
 
