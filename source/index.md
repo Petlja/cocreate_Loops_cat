@@ -15,7 +15,7 @@ long_description: >
 
 will_learn:
     - Condicions i bucles (repàs)
-    - Introducció a la criptografia: història i importància actual
+    - Introducció a la criptografia - història i importància actual
     - Xifratge Cèsar
     - Escítala
     - Xifratge XOR
