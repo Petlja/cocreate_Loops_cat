@@ -101,7 +101,7 @@ nikolateslaa
 
 ## Comença la tasca
 
-[Implementa el xifratge aquí](https://arena.petlja.org/sr-Latn-RS/competition/123-co-create#tab_142947)
+Fes la tasca i escriu la solució al teu quadern o document.
 
 ## Pistes per a la solució
 
