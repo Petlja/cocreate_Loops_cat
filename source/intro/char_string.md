@@ -143,6 +143,8 @@ Unicode és un conjunt de caràcters expandit que inclou tots els codis ASCII a 
 
 És important notar que tot i que algunes lletres llatines i ciríl·liques es veu igual, els seus valors Unicode són diferents. Per exemple, la lletra A majúscula llatina es codifica com U+0041, mentre que la lletra A majúscula ciríl·lica es codifica com U+0410.
 
+Aquests són només exemples de la llengua sèrbia. Si t'interessa, sempre pots aprendre més sobre els caràcters específics utilitzats en altres llengües.
+
 ## Cadenes
 
 Una cadena és una seqüència de caràcters ordenats en un ordre particular. Cada caràcter pot ser una lletra, un dígit, un signe de puntuació, un espai, etc. Les cadenes són fonamentals en la informàtica perquè representen text, noms de fitxers, entrada de l'usuari i molt més.
